@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="typora-vue-theme主题介绍, HTML,CSS,JavaScript,JQuery,java,linux等">
-    <meta name="description" content="这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要">
+    <meta name="keywords" content="git配置SSH, HTML,CSS,JavaScript,JQuery,java,linux等">
+    <meta name="description" content="git配置SSH的详细过程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>typora-vue-theme主题介绍 | 不吃酸的小柠檬</title>
+    <title>git配置SSH | 不吃酸的小柠檬</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">typora-vue-theme主题介绍</h1>
+                    <h1 class="description center-align post-title">git配置SSH</h1>
                 </div>
             </div>
         </div>
@@ -435,12 +435,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
                             </a>
                         
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/SSH/">
+                                <span class="chip bg-color">SSH</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
+                            <a href="/categories/git/" class="post-category">
+                                git
                             </a>
                         
                     </div>
@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-24
+                    2021-10-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    622
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -505,19 +505,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very second post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><p>SSH 为 Secure Shell 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。</p>
+<h3 id="配置SSH的好处"><a href="#配置SSH的好处" class="headerlink" title="配置SSH的好处"></a>配置SSH的好处</h3><p>可以将文件克隆到本地：</p>
+<p>使用https url对初学者来说会比较方便，复制https url然后到git Bash里面直接用clone命令克隆到本地就好了，但是每次fetch和push代码都需要输入账号和密码，这也是https方式的麻烦之处。</p>
+<p>使用SSH url需要在只用之前先配置和添加好SSH key。每次fetch和push代码都不需要输入账号和密码，如果你想要每次都输入账号密码才能进行fetch和push也可以另外进行设置。</p>
+<h3 id="验证身份"><a href="#验证身份" class="headerlink" title="验证身份"></a>验证身份</h3><pre><code>git config --global user.name "yourname"
+git config --global user.email "youremail"
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<h3 id="检验输入的是否正确"><a href="#检验输入的是否正确" class="headerlink" title="检验输入的是否正确"></a>检验输入的是否正确</h3><pre><code>git config user.name
+git config user.email
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<h3 id="检查你电脑上是否有SSH-Key"><a href="#检查你电脑上是否有SSH-Key" class="headerlink" title="检查你电脑上是否有SSH Key"></a>检查你电脑上是否有SSH Key</h3><pre><code>~/.ssh 或者用~/.ssh ls
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<h3 id="创建SSH-Key"><a href="#创建SSH-Key" class="headerlink" title="创建SSH Key"></a>创建SSH Key</h3><pre><code>$ ssh-keygen -t rsa -C "你的邮箱"
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"><br>然后一路回车（这一步其实是有关于密码的设置，现在一路回车相当于不设，比较简单），展示密钥</p>
+<h3 id="生成存放密钥的文件："><a href="#生成存放密钥的文件：" class="headerlink" title="生成存放密钥的文件："></a>生成存放密钥的文件：</h3><p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
+<p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
+<h3 id="在github中进行配置："><a href="#在github中进行配置：" class="headerlink" title="在github中进行配置："></a>在github中进行配置：</h3><p>在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key把你的id_rsa.pub里面的信息复制进去。（注意该设置是在整个大范围里，以此该设置并不是在仓库的设置中）<br><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"><br><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
+<h3 id="检验是否成功："><a href="#检验是否成功：" class="headerlink" title="检验是否成功："></a>检验是否成功：</h3><pre><code>$ ssh -T git@github.com（注意github.com并不是你的邮箱，直接这样就行了）
+</code></pre>
+<p>会出现以下提示：</p>
+<pre><code>Are you sure you want to continue connecting (yes/no/[fingerprint])?
+</code></pre>
+<p>输入yes，回车<br>接下来就会提示你输入密码，如果上边设置ssh的时候，你没设置密码会提示你：</p>
+<pre><code>Warning: Permanently added ‘github.com,192.30.255.112’ (RSA) to the list of known hosts.
+</code></pre>
+<p>警告完了，如果你能看到如下提示，那你已经成功设置SSH密钥。</p>
+<pre><code>Hi “用户名”! You’ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
+<p>如果你看到 access denied，者表示拒绝访问，</p>
 
                 
             </div>
@@ -544,7 +561,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://liumengting.co/2021/10/24/first/">http://liumengting.co/2021/10/24/first/</a>
+                    <a href="http://liumengting.co/2021/10/24/ssh/">http://liumengting.co/2021/10/24/ssh/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -582,12 +599,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
                                 </a>
                             
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
+                                <a href="/tags/SSH/">
+                                    <span class="chip bg-color">SSH</span>
                                 </a>
                             
                         </div>
@@ -1029,24 +1046,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/24/ssh/">
+                <a href="/2021/10/28/git/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="git配置SSH">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="git">
                         
-                        <span class="card-title">git配置SSH</span>
+                        <span class="card-title">git</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            git配置SSH的详细过程
+                            这是一篇很适合新手的git文章，介绍了什么是github,git；git的基本操作，包括建仓库、本地与github相连、上传文件、克隆项目、删除文件
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>10月 24 2021
+                            <i class="far fa-clock fa-fw icon-date"></i>10月 28 2021
                         </span>
                         <span class="publish-author">
                             
@@ -1067,8 +1084,8 @@
                         <span class="chip bg-color">git</span>
                     </a>
                     
-                    <a href="/tags/SSH/">
-                        <span class="chip bg-color">SSH</span>
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>
@@ -1079,7 +1096,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/10/24/first/">
@@ -1113,7 +1130,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     

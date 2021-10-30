@@ -6,7 +6,7 @@
   <link href="http://liumengting.co/atom.xml" rel="self"/>
   
   <link href="http://liumengting.co/"/>
-  <updated>2021-10-24T14:55:29.098Z</updated>
+  <updated>2021-10-28T16:21:27.396Z</updated>
   <id>http://liumengting.co/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://liumengting.co/2021/10/28/git/"/>
+    <id>http://liumengting.co/2021/10/28/git/</id>
+    <published>2021-10-28T02:00:00.000Z</published>
+    <updated>2021-10-28T16:21:27.396Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近使用github+hexo+node.js在搭建个人的博客，发现与git相关的知识总是零零散散的，这一篇文章来总结一下我对git所有的了解，如果有错误的地方，大家可以指出来，我会不断完善。&lt;/p&gt;
+&lt;h2 id=&quot;了解git-github&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="http://liumengting.co/categories/git/"/>
+    
+    
+    <category term="git" scheme="http://liumengting.co/tags/git/"/>
+    
+    <category term="github" scheme="http://liumengting.co/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git配置SSH</title>
+    <link href="http://liumengting.co/2021/10/24/ssh/"/>
+    <id>http://liumengting.co/2021/10/24/ssh/</id>
+    <published>2021-10-24T01:25:00.000Z</published>
+    <updated>2021-10-30T08:54:53.794Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;SSH&quot;&gt;&lt;a href=&quot;#SSH&quot; class=&quot;headerlink&quot; title=&quot;SSH&quot;&gt;&lt;/a&gt;SSH&lt;/h3&gt;&lt;p&gt;SSH 为 Secure Shell 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="http://liumengting.co/categories/git/"/>
+    
+    
+    <category term="git" scheme="http://liumengting.co/tags/git/"/>
+    
+    <category term="SSH" scheme="http://liumengting.co/tags/SSH/"/>
+    
+  </entry>
   
   <entry>
     <title>typora-vue-theme主题介绍</title>
@@ -40,27 +95,6 @@
     <category term="Typora" scheme="http://liumengting.co/tags/Typora/"/>
     
     <category term="Markdown" scheme="http://liumengting.co/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://liumengting.co/2021/10/03/hello-world/"/>
-    <id>http://liumengting.co/2021/10/03/hello-world/</id>
-    <published>2021-10-03T01:25:06.907Z</published>
-    <updated>2021-10-03T01:25:06.907Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
