@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="git配置SSH, HTML,CSS,JavaScript,JQuery,java,linux等">
-    <meta name="description" content="配置SSH的详细过程（身份验证、检验是否有SSH、创建SSH）">
+    <meta name="keywords" content="浏览器快速访问github, HTML,CSS,JavaScript,JQuery,java,linux等">
+    <meta name="description" content="绕过dns解析，通过在本地直接绑定host的方法加快github的访问速度">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>git配置SSH | 不吃酸的小柠檬</title>
+    <title>浏览器快速访问github | 不吃酸的小柠檬</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">git配置SSH</h1>
+                    <h1 class="description center-align post-title">浏览器快速访问github</h1>
                 </div>
             </div>
         </div>
@@ -435,12 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
-                            </a>
-                        
-                            <a href="/tags/SSH/">
-                                <span class="chip bg-color">SSH</span>
+                            <a href="/tags/github/">
+                                <span class="chip bg-color">github</span>
                             </a>
                         
                     </div>
@@ -451,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/git/" class="post-category">
-                                git
+                            <a href="/categories/github/" class="post-category">
+                                github
                             </a>
                         
                     </div>
@@ -464,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-24
+                    2021-10-31
                 </div>
                 
 
@@ -478,14 +474,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    621
+                    219
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -505,36 +501,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><p>SSH 为 Secure Shell 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。</p>
-<h3 id="配置SSH的好处"><a href="#配置SSH的好处" class="headerlink" title="配置SSH的好处"></a>配置SSH的好处</h3><p>可以将文件克隆到本地：</p>
-<p>使用https url对初学者来说会比较方便，复制https url然后到git Bash里面直接用clone命令克隆到本地就好了，但是每次fetch和push代码都需要输入账号和密码，这也是https方式的麻烦之处。</p>
-<p>使用SSH url需要在只用之前先配置和添加好SSH key。每次fetch和push代码都不需要输入账号和密码，如果你想要每次都输入账号密码才能进行fetch和push也可以另外进行设置。</p>
-<h3 id="验证身份"><a href="#验证身份" class="headerlink" title="验证身份"></a>验证身份</h3><pre><code>git config --global user.name "yourname"
-git config --global user.email "youremail"
-</code></pre>
-<h3 id="检验输入的是否正确"><a href="#检验输入的是否正确" class="headerlink" title="检验输入的是否正确"></a>检验输入的是否正确</h3><pre><code>git config user.name
-git config user.email
-</code></pre>
-<h3 id="检查你电脑上是否有SSH-Key"><a href="#检查你电脑上是否有SSH-Key" class="headerlink" title="检查你电脑上是否有SSH Key"></a>检查你电脑上是否有SSH Key</h3><pre><code>~/.ssh 或者用~/.ssh ls
-</code></pre>
-<h3 id="创建SSH-Key"><a href="#创建SSH-Key" class="headerlink" title="创建SSH Key"></a>创建SSH Key</h3><pre><code>$ ssh-keygen -t rsa -C "你的邮箱"
-</code></pre>
-<p>然后一路回车（这一步其实是有关于密码的设置，现在一路回车相当于不设，比较简单），展示密钥<br><img src="1.png"></p>
-<h3 id="生成存放密钥的文件"><a href="#生成存放密钥的文件" class="headerlink" title="生成存放密钥的文件"></a>生成存放密钥的文件</h3><p><img src="2.png"></p>
-<p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
-<h3 id="在github中进行配置"><a href="#在github中进行配置" class="headerlink" title="在github中进行配置"></a>在github中进行配置</h3><p>在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key把你的id_rsa.pub里面的信息复制进去。（注意该设置是在整个大范围里，以此该设置并不是在仓库的设置中）<br><img src="3.jpg"><br><img src="4.png"></p>
-<h3 id="检验是否成功"><a href="#检验是否成功" class="headerlink" title="检验是否成功"></a>检验是否成功</h3><pre><code>$ ssh -T git@github.com（注意github.com并不是你的邮箱，直接这样就行了）
-</code></pre>
-<p>会出现以下提示：</p>
-<pre><code>Are you sure you want to continue connecting (yes/no/[fingerprint])?
-</code></pre>
-<p>输入yes，回车<br>接下来就会提示你输入密码，如果上边设置ssh的时候，你没设置密码会提示你：</p>
-<pre><code>Warning: Permanently added ‘github.com,192.30.255.112’ (RSA) to the list of known hosts.
-</code></pre>
-<p>警告完了，如果你能看到如下提示，那你已经成功设置SSH密钥。</p>
-<pre><code>Hi “用户名”! You’ve successfully authenticated, but GitHub does not provide shell access.
-</code></pre>
-<p>如果你看到 access denied，者表示拒绝访问，</p>
+                <p>在用github创建个人博客时，我们发现每次进入github总是很慢，有时甚至进不去，以下我分享一个小方法，可以让我们快速的进入该网站</p>
+<p>**1. **打开 <a target="_blank" rel="noopener" href="http://tool.chinaz.com/dns">http://tool.chinaz.com/dns</a> ,这是一个查询域名映射关系的工具<br>查询你想要打开的网站地址，多查几次，选择一个稳定，记录延迟较低的 ip，这里我们查询<a target="_blank" rel="noopener" href="https://github.com/">https://github.com</a><br><img src="1.jpg"><br>复制这段ip（注意是值小的不是值大的）</p>
+<p>** 2. **用文本编辑器打开hosts文件，位于C:\Windows\System32\drivers\etc目录下<br><img src="2.jpg"></p>
+<p>**3. **将刚才记录的ip添加到此文件内<br><img src="3.jpg"><br>注意ip地址和github.com中间有两个空格</p>
+<p>**4. **保存文件，重新打开浏览器，可能用了一段时间它又开始慢了，那就把以上的操作再重复一遍</p>
 
                 
             </div>
@@ -561,7 +532,7 @@ git config user.email
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://liumengting.co/2021/10/24/ssh/">http://liumengting.co/2021/10/24/ssh/</a>
+                    <a href="http://liumengting.co/2021/10/31/github/">http://liumengting.co/2021/10/31/github/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,12 +570,8 @@ git config user.email
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
-                                </a>
-                            
-                                <a href="/tags/SSH/">
-                                    <span class="chip bg-color">SSH</span>
+                                <a href="/tags/github/">
+                                    <span class="chip bg-color">github</span>
                                 </a>
                             
                         </div>
@@ -1042,9 +1009,60 @@ git config user.email
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/10/31/github/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="浏览器快速访问github">
+                        
+                        <span class="card-title">浏览器快速访问github</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            绕过dns解析，通过在本地直接绑定host的方法加快github的访问速度
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>10月 31 2021
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/github/" class="post-category">
+                                    github
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/10/31/git/">
                     <div class="card-image">
@@ -1062,9 +1080,9 @@ git config user.email
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>10月 31 2021
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>10月 31 2021
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1086,60 +1104,6 @@ git config user.email
                     
                     <a href="/tags/github/">
                         <span class="chip bg-color">github</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/10/24/ssh/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="git配置SSH">
-                        
-                        <span class="card-title">git配置SSH</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            配置SSH的详细过程（身份验证、检验是否有SSH、创建SSH）
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>10月 24 2021
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/git/" class="post-category">
-                                    git
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
-                    <a href="/tags/SSH/">
-                        <span class="chip bg-color">SSH</span>
                     </a>
                     
                 </div>

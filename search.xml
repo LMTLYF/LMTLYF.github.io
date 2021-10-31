@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>浏览器快速访问github</title>
+      <link href="/2021/10/31/github/"/>
+      <url>/2021/10/31/github/</url>
+      
+        <content type="html"><![CDATA[<p>在用github创建个人博客时，我们发现每次进入github总是很慢，有时甚至进不去，以下我分享一个小方法，可以让我们快速的进入该网站</p><p>**1. **打开 <a href="http://tool.chinaz.com/dns">http://tool.chinaz.com/dns</a> ,这是一个查询域名映射关系的工具<br>查询你想要打开的网站地址，多查几次，选择一个稳定，记录延迟较低的 ip，这里我们查询<a href="https://github.com/">https://github.com</a><br><img src="1.jpg"><br>复制这段ip（注意是值小的不是值大的）</p><p>** 2. **用文本编辑器打开hosts文件，位于C:\Windows\System32\drivers\etc目录下<br><img src="2.jpg"></p><p>**3. **将刚才记录的ip添加到此文件内<br><img src="3.jpg"><br>注意ip地址和github.com中间有两个空格</p><p>**4. **保存文件，重新打开浏览器，可能用了一段时间它又开始慢了，那就把以上的操作再重复一遍</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git</title>
       <link href="/2021/10/31/git/"/>
       <url>/2021/10/31/git/</url>
