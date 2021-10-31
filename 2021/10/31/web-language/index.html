@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="friends, HTML,CSS,JavaScript,JQuery,java,linux等">
-    <meta name="description" content="friends | 不吃酸的小柠檬">
+    <meta name="keywords" content="网页设计语言, HTML,CSS,JavaScript,JQuery,java,linux等">
+    <meta name="description" content="在web网页设计中遇到的语言，了解它们的关系和区别">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>friends | 不吃酸的小柠檬</title>
+    <title>网页设计语言 | 不吃酸的小柠檬</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -310,358 +310,444 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                你值得世间所有的温柔
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                       strings: ['从来没有真正的绝境, 只有心灵的迷途',
-		     'Never really desperate, only the lost of the soul',
-                                     '会有突如其来的惊喜，会有始料不及的运气',
-                                     '背对着阳光站在云端，一面唯美娇柔，一面隐晦空洞',
-                                     '',
-                                     '愿你三冬暖，愿你春不寒',
-                                     '不要老是垂头丧气的嘛，要笑，好运才会来啊'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">网页设计语言</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
-    .friends-container {
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
         margin-top: -100px;
-        margin-bottom: 30px;
+        visibility: hidden;
     }
 
-    .friends-container .tag-title {
-        margin-bottom: 10px;
-        color: #3C4858;
-        font-size: 1.75rem;
-        font-weight: 400;
+    #articleContent :focus {
+        outline: none;
     }
 
-    .frind-ship img {
-        border-radius: 50%;
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
     }
 
-    /* 一下是按钮样式 */
-
-    .frind-ship {
-        padding: 10px 20px;
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
     }
 
-    .frind-ship .title {
-        display: flex;
-        align-items: center;
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
     }
 
-    .frind-ship .title div {
-        color: #fff;
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
         padding-left: 10px;
     }
 
-    .frind-ship .title img {
-        width: 100px;
-        height: 100px;
-        flex-shrink: 0;
+    #toc-content ol li {
+        padding-left: 10px;
     }
 
-    .frind-ship .title h1 {
-        padding-bottom: 5px;
-        border-bottom: 2px solid #fff;
-        position: relative;
-        top:-15px;
-        left: 3px;
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
     }
 
-    .friend-button {
-        display: flex;
-        justify-content: center;
-        margin-bottom: -27px;
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
     }
 
-    .friend-button a {
-        border-radius: 40px;
+    #toc-content .is-active-link {
+        color: #42b983;
     }
 
-    .friend-all .tag-post {
-        margin-bottom: 30px;
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
     }
 
-    .button-caution {
-        background-color: #FF4351;
-        border-color: #FF4351;
-        color: #FFF;
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
     }
 
-    .button {
-        font-weight: 300;
-        font-size: 16px;
-        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        text-decoration: none;
-        text-align: center;
-        line-height: 40px;
-        height: 40px;
-        padding: 0 40px;
-        margin: 0;
-        display: inline-block;
-        appearance: none;
-        cursor: pointer;
-        border: none;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-transition-property: all;
-        transition-property: all;
-        -webkit-transition-duration: .3s;
-        transition-duration: .3s;
-    }
-
-    .title {
-        margin-bottom: 0rem !important;
-    }
-
-    .card {
-        margin: 3rem 0 1rem 0 !important;
-    }
-
-    .button-glow.button-caution {
-        -webkit-animation-name: glowing-caution;
-        animation-name: glowing-caution;
-    }
-
-    @-webkit-keyframes glowing-caution {
-        from {
-            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-        }
-
-        50% {
-            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-        }
-
-        to {
-            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-        }
-    }
-
-    @keyframes glowing-caution {
-        from {
-            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-        }
-
-        50% {
-            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-        }
-
-        to {
-            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-        }
-    }
-
-    .button-caution:hover {
-        background-color: #ff7680;
-        border-color: #ff7680;
-        color: #FFF;
-        text-decoration: none;
-    }
-
-    .frind-card1 {
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    }
-
-    .frind-card2 {
-        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-
-    .frind-card3 {
-        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    }
-
-    .frind-card4 {
-        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-    }
-
-    .frind-card5 {
-        background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-    }
-
-    .frind-card6 {
-        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-    }
-
-    .frind-card7 {
-        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-    }
-
-    .frind-card8 {
-        background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
-    }
-
-    .frind-card9 {
-        background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
-    }
-
-    .frind-card10 {
-        background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
-    }
-
-    article .card {
-        overflow: visible !important;
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
     }
 </style>
-
-<main class="content">
-    <div class="container friends-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;友情链接
-                </div>
-                <article id="friends-link">
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
                     
-                    
-                    <div class="row tags-posts friend-all">
+                    <div class="article-tag">
                         
-                        
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card1">
-                                <div class="frind-ship">
-                                    <div class="title">
-                                        <img src="https://cdn.jsdelivr.net/gh/guixinchn/image/blog/csdn.png" alt="img">
-                                        <div>
-                                            <h1 class="friend-name">Blog</h1>
-                                            <p style="position: relative;top: -35px;">CSDN社区</p>
-                                        </div>
-                                    </div>
-                                    <div class="friend-button">
-                                        <a href="https://blog.csdn.net/m0_54588572?spm=1000.2115.3001.5343" target="_blank"
-                                            class="button button-glow button-rounded button-caution">
-                                            CSDN
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card2">
-                                <div class="frind-ship">
-                                    <div class="title">
-                                        <img src="https://cdn.jsdelivr.net/gh/guixinchn/image/blog/bokeyuan.png" alt="img">
-                                        <div>
-                                            <h1 class="friend-name">Blog</h1>
-                                            <p style="position: relative;top: -35px;">博客园</p>
-                                        </div>
-                                    </div>
-                                    <div class="friend-button">
-                                        <a href="https://www.cnblogs.com/guixinchn/" target="_blank"
-                                            class="button button-glow button-rounded button-caution">
-                                            博客园
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card3">
-                                <div class="frind-ship">
-                                    <div class="title">
-                                        <img src="https://cdn.jsdelivr.net/gh/guixinchn/image/blog/github.png" alt="img">
-                                        <div>
-                                            <h1 class="friend-name">github</h1>
-                                            <p style="position: relative;top: -35px;">github</p>
-                                        </div>
-                                    </div>
-                                    <div class="friend-button">
-                                        <a href="https://github.com/LMTLYF" target="_blank"
-                                            class="button button-glow button-rounded button-caution">
-                                            github
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card4">
-                                <div class="frind-ship">
-                                    <div class="title">
-                                        <img src="/medias/avatar.jpg" alt="img">
-                                        <div>
-                                            <h1 class="friend-name">Blog</h1>
-                                            <p style="position: relative;top: -35px;">不吃酸的小柠檬</p>
-                                        </div>
-                                    </div>
-                                    <div class="friend-button">
-                                        <a href="https://liumengting.co" target="_blank"
-                                            class="button button-glow button-rounded button-caution">
-                                            不吃酸的小柠檬
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <a href="/tags/web/">
+                                <span class="chip bg-color">web</span>
+                            </a>
                         
                     </div>
                     
-                </article>
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web/" class="post-category">
+                                web
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-10-31
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-11-01
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    766
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
+        <hr class="clearfix">
 
         
 
-        <div class="card">
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>在学习web网页设计的学习中，我们会遇到很多新的语言，这篇文章对这些语言进行了总结，以便更好的了解每一种语言，和它们之间的区别和联系，以便更好的使用</p>
+<h3 id="网页设计"><a href="#网页设计" class="headerlink" title="网页设计"></a>网页设计</h3><p><strong>web网页一般分为三层：</strong>结构层，表现层，行为层；</p>
+<p><strong>对应的标准也分为三方面</strong>：结构化标准语言（HTML和XML）,表现标准语言（CSS）,行为标准（对象模型和脚本语言）。其中最主要的内容是脚本语言和浏览器对象模型。</p>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p><em><strong>超文本标记语言；</strong></em>主要是做网页的框架</p>
+<h3 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h3><p>（1）<em><strong>渲染引擎；</strong></em>渲染引擎的职责就是渲染，即在浏览器窗口中显示所请求的内容。默认情况下，渲染引擎可以显示html、xml文档及图片，它可以导出成各种形式。</p>
+<p>（2）<em><strong>轻量级标记语言；</strong></em>和HTML类似，不过比较简单，比较易于写博客</p>
+<p>（3）不过它并不是支持HTML所有标签，只是支持一部分</p>
+<h3 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h3><p><em><strong>可扩展标记语言；</strong></em>是用于标记的，对于构建页面并没有什么作用</p>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p><em><strong>层叠样式表；</strong></em>主要是用于修饰页面的</p>
+<h3 id="java-script"><a href="#java-script" class="headerlink" title="java script"></a>java script</h3><p><em><strong>解释性编程语言；</strong></em></p>
+<p>作用：它实现了页面的动态，它既可以用于客户端也可以用于服务器端，它是基于对象和事件的，在使用时可以多考虑考虑对象</p>
+<p>分析：1.javascript是基于事件和对象，而基于对象的基本特征就是采用事件驱动（对事件进行处理的程序或者函数，事件可以是单击鼠标或者热键），因此jabascript应用程序通常是事件驱动程序<br>node.js:java script的运行环境，是基于v5引擎的一个平台</p>
+<h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><p>（1）是与javascript相似的在服务端的<em><strong>编程语言</strong></em></p>
+<p>（2）Node.js 是一个基于Chrome JavaScript 运行时建立的一个<em><strong>平台</strong></em></p>
+<p>Node.js是一个事件驱动I/O（输入输出）服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好</p>
+<h3 id="YAML"><a href="#YAML" class="headerlink" title="YAML"></a>YAML</h3><p>在开发的这种语言时，YAML 的意思其实是：”Yet Another Markup Language”（仍是一种标记语言）。YAML 的语法和其他高级语言类似，并且可以简单表达清单、散列表，标量等数据形态。</p>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>JSON 指的是 JavaScript 对象表示法（JavaScript Object Notation）</p>
+<p>JSON 是轻量级的文本数据交换格式（根据实例发现它其实是可以将一些很复杂的文本用易于理解的文本来表示）</p>
+<p>JSON 独立于语言：JSON 使用 Javascript语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。 目前非常多的动态（PHP，JSP，.NET）编程语言都支持JSON。</p>
+<p>JSON 具有自我描述性，更易理解</p>
+<p>JSON其实和html,css,javascript完全脱不了关系</p>
+
+                
+            </div>
+            <hr/>
 
             
 
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">不吃酸的小柠檬</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://liumengting.co/2021/10/31/web-language/">http://liumengting.co/2021/10/31/web-language/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">不吃酸的小柠檬</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/web/">
+                                    <span class="chip bg-color">web</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
 
             
+        </div>
+    </div>
 
-            
+    
 
-            
-            <style>
+    
+
+    
+
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -926,21 +1012,239 @@
 <!--酷Q推送-->
 
 
-            
+    
 
-            
+    
 
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/10/31/config/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="_config.yml配置文件">
+                        
+                        <span class="card-title">_config.yml配置文件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            hexo原有的_config.yml（如果在配置出现错误时可以直接复制）
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>10月 31 2021
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/31/github/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="浏览器快速访问github">
+                        
+                        <span class="card-title">浏览器快速访问github</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            绕过dns解析，通过在本地直接绑定host的方法加快github的访问速度
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>10月 31 2021
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/github/" class="post-category">
+                                    github
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
-</main>
+</div>
 
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
-        $('#friends-link').masonry({
-            itemSelector: '.friend-div'
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
         });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
     });
 </script>
+
+    
+
+</main>
+
+
 
 
     <footer class="page-footer bg-color">

@@ -6,7 +6,7 @@
   <link href="http://liumengting.co/atom.xml" rel="self"/>
   
   <link href="http://liumengting.co/"/>
-  <updated>2021-10-31T01:11:59.131Z</updated>
+  <updated>2021-10-31T15:56:11.170Z</updated>
   <id>http://liumengting.co/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>_config.yml配置文件</title>
+    <link href="http://liumengting.co/2021/10/31/config/"/>
+    <id>http://liumengting.co/2021/10/31/config/</id>
+    <published>2021-10-31T14:00:00.000Z</published>
+    <updated>2021-10-31T15:56:11.170Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;配置_config.yml文件出现错误时，不想删除可以直接复制该文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source:</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://liumengting.co/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://liumengting.co/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网页设计语言</title>
+    <link href="http://liumengting.co/2021/10/31/web-language/"/>
+    <id>http://liumengting.co/2021/10/31/web-language/</id>
+    <published>2021-10-31T14:00:00.000Z</published>
+    <updated>2021-10-31T16:56:45.326Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在学习web网页设计的学习中，我们会遇到很多新的语言，这篇文章对这些语言进行了总结，以便更好的了解每一种语言，和它们之间的区别和联系，以便更好的使用&lt;/p&gt;
+&lt;h3 id=&quot;网页设计&quot;&gt;&lt;a href=&quot;#网页设计&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://liumengting.co/categories/web/"/>
+    
+    
+    <category term="web" scheme="http://liumengting.co/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>浏览器快速访问github</title>

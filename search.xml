@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>_config.yml配置文件</title>
+      <link href="/2021/10/31/config/"/>
+      <url>/2021/10/31/config/</url>
+      
+        <content type="html"><![CDATA[<p>配置_config.yml文件出现错误时，不想删除可以直接复制该文件</p><pre><code># Hexo Configuration## Docs: http://hexo.io/docs/configuration.html## Source: https://github.com/hexojs/hexo/ # Sitetitle: Hexosubtitle:description:author: John Doeemail:language: # URL## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'url: http://liumengting.coroot: /permalink: :year/:month/:day/:title/tag_dir: tagsarchive_dir: archivescategory_dir: categoriescode_dir: downloads/codepermalink_defaults: # Directorysource_dir: sourcepublic_dir: public # Writingnew_post_name: :title.md # File name of new postsdefault_layout: posttitlecase: false # Transform title into titlecaseexternal_link:  enable: true # Open external links in new tab  field: site # Apply to the whole site  exclude: ''filename_case: 0render_drafts: falsepost_asset_folder: falserelative_link: falsehighlight:  enable: true  line_number: true  tab_replace: # Category &amp; Tagdefault_category: uncategorizedcategory_map:tag_map: # Archives## 2: Enable pagination## 1: Disable pagination## 0: Fully Disablearchive: 2category: 2tag: 2 # Server## Hexo uses Connect as a server## You can customize the logger format as defined in## http://www.senchalabs.org/connect/logger.htmlport: 4000server_ip: localhostlogger: falselogger_format: dev # Date / Time format## Hexo uses Moment.js to parse and display date## You can customize the date format as defined in## http://momentjs.com/docs/#/displaying/format/date_format: MMM D YYYYtime_format: H:mm:ss # Pagination## Set per_page to 0 to disable paginationper_page: 10pagination_dir: page # Disqusdisqus_shortname: # Extensions## Plugins: https://github.com/hexojs/hexo/wiki/Plugins## Themes: https://github.com/hexojs/hexo/wiki/Themestheme: landscapeexclude_generator: # Deployment## Docs: https://hexo.io/docs/one-command-deploymentdeploy:  type: git  repo: git@github.com:LMTLYF/LMTLYF.github.io.git  branch: master</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网页设计语言</title>
+      <link href="/2021/10/31/web-language/"/>
+      <url>/2021/10/31/web-language/</url>
+      
+        <content type="html"><![CDATA[<p>在学习web网页设计的学习中，我们会遇到很多新的语言，这篇文章对这些语言进行了总结，以便更好的了解每一种语言，和它们之间的区别和联系，以便更好的使用</p><h3 id="网页设计"><a href="#网页设计" class="headerlink" title="网页设计"></a>网页设计</h3><p><strong>web网页一般分为三层：</strong>结构层，表现层，行为层；</p><p><strong>对应的标准也分为三方面</strong>：结构化标准语言（HTML和XML）,表现标准语言（CSS）,行为标准（对象模型和脚本语言）。其中最主要的内容是脚本语言和浏览器对象模型。</p><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p><em><strong>超文本标记语言；</strong></em>主要是做网页的框架</p><h3 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h3><p>（1）<em><strong>渲染引擎；</strong></em>渲染引擎的职责就是渲染，即在浏览器窗口中显示所请求的内容。默认情况下，渲染引擎可以显示html、xml文档及图片，它可以导出成各种形式。</p><p>（2）<em><strong>轻量级标记语言；</strong></em>和HTML类似，不过比较简单，比较易于写博客</p><p>（3）不过它并不是支持HTML所有标签，只是支持一部分</p><h3 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h3><p><em><strong>可扩展标记语言；</strong></em>是用于标记的，对于构建页面并没有什么作用</p><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p><em><strong>层叠样式表；</strong></em>主要是用于修饰页面的</p><h3 id="java-script"><a href="#java-script" class="headerlink" title="java script"></a>java script</h3><p><em><strong>解释性编程语言；</strong></em></p><p>作用：它实现了页面的动态，它既可以用于客户端也可以用于服务器端，它是基于对象和事件的，在使用时可以多考虑考虑对象</p><p>分析：1.javascript是基于事件和对象，而基于对象的基本特征就是采用事件驱动（对事件进行处理的程序或者函数，事件可以是单击鼠标或者热键），因此jabascript应用程序通常是事件驱动程序<br>node.js:java script的运行环境，是基于v5引擎的一个平台</p><h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><p>（1）是与javascript相似的在服务端的<em><strong>编程语言</strong></em></p><p>（2）Node.js 是一个基于Chrome JavaScript 运行时建立的一个<em><strong>平台</strong></em></p><p>Node.js是一个事件驱动I/O（输入输出）服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好</p><h3 id="YAML"><a href="#YAML" class="headerlink" title="YAML"></a>YAML</h3><p>在开发的这种语言时，YAML 的意思其实是：”Yet Another Markup Language”（仍是一种标记语言）。YAML 的语法和其他高级语言类似，并且可以简单表达清单、散列表，标量等数据形态。</p><h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>JSON 指的是 JavaScript 对象表示法（JavaScript Object Notation）</p><p>JSON 是轻量级的文本数据交换格式（根据实例发现它其实是可以将一些很复杂的文本用易于理解的文本来表示）</p><p>JSON 独立于语言：JSON 使用 Javascript语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。 目前非常多的动态（PHP，JSP，.NET）编程语言都支持JSON。</p><p>JSON 具有自我描述性，更易理解</p><p>JSON其实和html,css,javascript完全脱不了关系</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浏览器快速访问github</title>
       <link href="/2021/10/31/github/"/>
       <url>/2021/10/31/github/</url>
