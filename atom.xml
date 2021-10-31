@@ -6,7 +6,7 @@
   <link href="http://liumengting.co/atom.xml" rel="self"/>
   
   <link href="http://liumengting.co/"/>
-  <updated>2021-10-28T16:21:27.396Z</updated>
+  <updated>2021-10-31T00:20:40.719Z</updated>
   <id>http://liumengting.co/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>git</title>
-    <link href="http://liumengting.co/2021/10/28/git/"/>
-    <id>http://liumengting.co/2021/10/28/git/</id>
-    <published>2021-10-28T02:00:00.000Z</published>
-    <updated>2021-10-28T16:21:27.396Z</updated>
+    <link href="http://liumengting.co/2021/10/31/git/"/>
+    <id>http://liumengting.co/2021/10/31/git/</id>
+    <published>2021-10-31T00:00:00.000Z</published>
+    <updated>2021-10-31T00:20:40.719Z</updated>
     
     
       
@@ -49,7 +49,7 @@
     <link href="http://liumengting.co/2021/10/24/ssh/"/>
     <id>http://liumengting.co/2021/10/24/ssh/</id>
     <published>2021-10-24T01:25:00.000Z</published>
-    <updated>2021-10-30T12:32:16.512Z</updated>
+    <updated>2021-10-31T00:15:20.659Z</updated>
     
     
       
@@ -68,33 +68,6 @@
     <category term="git" scheme="http://liumengting.co/tags/git/"/>
     
     <category term="SSH" scheme="http://liumengting.co/tags/SSH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>typora-vue-theme主题介绍</title>
-    <link href="http://liumengting.co/2021/10/24/first/"/>
-    <id>http://liumengting.co/2021/10/24/first/</id>
-    <published>2021-10-24T01:25:00.000Z</published>
-    <updated>2021-10-24T14:55:29.098Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very second post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="Markdown" scheme="http://liumengting.co/categories/Markdown/"/>
-    
-    
-    <category term="Typora" scheme="http://liumengting.co/tags/Typora/"/>
-    
-    <category term="Markdown" scheme="http://liumengting.co/tags/Markdown/"/>
     
   </entry>
   
