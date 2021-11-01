@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-31
+                    2021-11-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -521,9 +521,32 @@
 <p><strong>Git GUI：</strong>Git GUI是Git Bash的替代品，他为Windows用户提供了更简便易懂的图形界面（相当于客户端但是并没有什么用）</p>
 <p><strong>Git Bash：</strong>是命令行操作，官方介绍有一句就是“让linux用户感到宾至如归”，安装完成后再桌面右键就可以看到它了，它的命令和linux命令几乎一模一样<br>git bash的命令行界面<br><img src="1.jpg"></p>
 <h2 id="github的客户端操作"><a href="#github的客户端操作" class="headerlink" title="github的客户端操作"></a>github的客户端操作</h2><h3 id="形象理解github"><a href="#形象理解github" class="headerlink" title="形象理解github"></a>形象理解github</h3><p>在介绍客户端操作之前，根据b站的官方视频还有我自己的了解（或许不太准确←_←），我觉得github有点类似于一个大型论坛，我用一个事例来解释一下为什么这样说。</p>
-<p>农民在割草，发现割草机的效率太低，他可以去一个技术员的下提出问题，技术员看到问题就开始进行这个项目，并把代码放到（仓库）中，唉，好巧不巧，有其他的技术员路过，可以直接克隆代码到自己的仓库中进行修改：技术员也可以把这个项目让他的同伴加入一起做，最后他们做好了，技术员觉得：“哇，做的真不错”，就可以上传到最初的那个代码仓库中。在了解了这样一个实例之后，客户端最重要的操作（pull questions,issues）就了解的差不多了。接下来我将进行详细的介绍。</p>
-<h3 id="个人页面"><a href="#个人页面" class="headerlink" title="个人页面"></a>个人页面</h3><p><img src="5.jpg"></p>
-<h3 id="仓库页面"><a href="#仓库页面" class="headerlink" title="仓库页面"></a>仓库页面</h3><p><img src="6.jpg"></p>
+<p>农民在割草，发现割草机的效率太低，他可以去一个技术员的下提出问题，技术员看到问题就开始进行这个项目，并把代码放到（仓库）中，唉，好巧不巧，有其他的技术员路过，可以直接克隆代码到自己的仓库中进行修改：技术员也可以把这个项目让他的同伴加入一起做，最后他们做好了，技术员觉得：“哇，做的真不错”，就可以上传到最初的那个代码仓库中。在了解了这样一个实例之后，客户端最重要的操作（pull requests,issues）就了解的差不多了。接下来我将进行详细的介绍。</p>
+<h3 id="个人页面"><a href="#个人页面" class="headerlink" title="个人页面"></a>个人页面</h3><p><img src="5.jpg"><br><strong>your profile</strong>你的个人介绍</p>
+<p><strong>your repositories</strong>你的仓库</p>
+<p><strong>your codespaces</strong>你的代码空间</p>
+<p><strong>your projects</strong>你的项目</p>
+<p><strong>upgrade</strong>升级</p>
+<p><strong>feature preview</strong>预览特征</p>
+<p><strong>settings</strong>设置</p>
+<h3 id="仓库页面"><a href="#仓库页面" class="headerlink" title="仓库页面"></a>仓库页面</h3><p><img src="6.jpg"><br><strong>issue</strong>是去别人的那里提出问题，这个人可以把这个项目给自己也可以找其他人一起做</p>
+<p><strong>pull requests</strong>该项目做好后要和最初的代码合并时就pull requests,同意后就可以合到一起</p>
+<h3 id="更多操作"><a href="#更多操作" class="headerlink" title="更多操作"></a>更多操作</h3><h4 id="（1）项目理解"><a href="#（1）项目理解" class="headerlink" title="（1）项目理解"></a>（1）项目理解</h4><p>创建分支master来进行修改不影响主干，自己在修改时担心影响master又创建branch。觉得修改可以了，可以用自己的master向主干pull request，很多人帮忙修改后提交。</p>
+<h4 id="（2）创建仓库"><a href="#（2）创建仓库" class="headerlink" title="（2）创建仓库"></a>（2）创建仓库</h4><p>名字包括：英文字母，横杠，下划线，英文的句号</p>
+<p>下面的readme勾选，是在仓库下面展示描述语言</p>
+<h4 id="（3）仓库访问"><a href="#（3）仓库访问" class="headerlink" title="（3）仓库访问"></a>（3）仓库访问</h4><p>通过完整域名在网页访问</p>
+<pre><code>https://github.com/usrename/仓库名.git     
+github的域名+仓库的主人+仓库名
+eg.https://github.com/LMTLYF/LMTLYF.git
+</code></pre>
+<p>在github中通过搜索访问</p>
+<p>.LMTLYF.git</p>
+<h4 id="（4）文件管理"><a href="#（4）文件管理" class="headerlink" title="（4）文件管理"></a>（4）文件管理</h4><p><strong>code</strong>可以下载压缩文件，其它的见名即可</p>
+<p><strong>commit</strong>展示的是提交次数</p>
+<p>文件的删除和修改直接文件点go to file</p>
+<h4 id="（5）充分利用论坛功能"><a href="#（5）充分利用论坛功能" class="headerlink" title="（5）充分利用论坛功能"></a>（5）充分利用论坛功能</h4><p><strong>issue</strong>是直接到别人的下面提问题</p>
+<p><strong>fork</strong>是直接取别人的代码</p>
+<p><strong>pull request</strong>是直接提交自己改的，不过要经过同意</p>
 <h2 id="github的整体操作"><a href="#github的整体操作" class="headerlink" title="github的整体操作"></a>github的整体操作</h2><p>整体操作中完完全全从头介绍了如何使用（对新手小白极其友好）</p>
 <h3 id="验证身份"><a href="#验证身份" class="headerlink" title="验证身份"></a>验证身份</h3><p>本电脑想要与github连接必须先验证身份</p>
 <pre><code>git config --global user.name "yourname"
@@ -1402,7 +1425,7 @@ $ git push -u origin master
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4k</span>
+                        class="white-color">4.4k</span>
             
             
             
