@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Hexo</title>
+      <link href="/2021/11/04/hexo/"/>
+      <url>/2021/11/04/hexo/</url>
+      
+        <content type="html"><![CDATA[<p>在建个人博客时会用到Hexo，本篇文章将详细介绍Hexo的文件夹和命令，以便之后写博客和主题配置，最后也会写一些我在用markdown写博客时遇到的问题，希望可以帮助到大家。<br>如果想更详细的了解hexo，建议大家去看<a href="https://hexo.io/zh-cn/docs/">官方文档</a>，里面非常详细</p><h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>Hexo是一个快速，简洁且高效的博客框架</p><h2 id="Hexo中的主要文件夹"><a href="#Hexo中的主要文件夹" class="headerlink" title="Hexo中的主要文件夹"></a>Hexo中的主要文件夹</h2><p><img src="1.jpg"><br><strong>-config.yml：</strong>配置文件，很多主要的配置都在其中</p><p>**source:**相当于一个数据库，我们在写博客的文件就存在其中（以.md结尾）</p><p><strong>themes:</strong> 主题文件，以 .yml 等类型，决定了页面如何“组装”</p><p>**public:**最后要上传到github的文件就存在这里</p><h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><h3 id="（1）Hexo三部曲（用于上传写好的文章）"><a href="#（1）Hexo三部曲（用于上传写好的文章）" class="headerlink" title="（1）Hexo三部曲（用于上传写好的文章）"></a>（1）Hexo三部曲（用于上传写好的文章）</h3><pre><code>hexo cleanhexo ghexo d</code></pre><p>运行 hexo clean命令，清除以前写的东西</p><p>运行 hexo g 命令，hexo(node.js程序)会遍历你的 source 目录，建立索引，这时 public 文件夹中就会生成由 html javascript css 等内容制作的文件，而这些恰好能在 git pages 识别</p><p>运行hexo d：把public文件夹中的文件上传到github</p><pre><code>hexo cleanhexo ghexo server//可以预览，在浏览器输入localhost:4000Ctrl+C退出预览</code></pre><h3 id="（2）创建文件（写文章）"><a href="#（2）创建文件（写文章）" class="headerlink" title="（2）创建文件（写文章）"></a>（2）创建文件（写文章）</h3><pre><code>$ hexo new [layout] &lt;title&gt;</code></pre><p>layout是布局：Hexo 有三种默认布局：post、page 和 draft。默认是post布局，储存到 source/_posts 文件夹中，找到对应的.md文件开始编辑。<br>$ hexo new photo “My Gallery”</p><p>在执行这行指令时，Hexo 会尝试在 scaffolds （模板文件）文件夹中寻找 photo.md来确定该文章的展现形式</p><h3 id="（3）文章的front-matter（前页）"><a href="#（3）文章的front-matter（前页）" class="headerlink" title="（3）文章的front-matter（前页）"></a>（3）文章的front-matter（前页）</h3><p>前页就是你使用hexo new article 自动生成的文章自动有的<br><img src="2.jpg"><br><img src="3.jpg"><br>默认生成</p><pre><code>---title: testdate: 2021-11-05 11:43:20tags:---</code></pre><p>我们可以增加一些属性，如下：</p><pre><code>---title: 文章标题date: 2021-11-07 09:25:00（发表日期）author: 你的名字img: /source/images/xxx.jpg（封面图）top: true（是否置顶）cover: true(是否作为封面)coverImg: /images/1.jpg（封面图）password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92（访问该文章需要的密码）toc: falsemathjax: falsesummary: 这是你自定义的文章摘要内容，若没有值，程序会自动截取文章的部分内容作为摘要categories: Markdown（分类，只有一个）tags:（标签，可以有多个）  - Typora  - Markdown---</code></pre><p>如果 img 属性不填写的话，文章特色图会根据文章标题的 hashcode 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图各有特色。</p><h3 id="（4）删除错误的文件"><a href="#（4）删除错误的文件" class="headerlink" title="（4）删除错误的文件"></a>（4）删除错误的文件</h3><p>直接在本地source文件夹找到对应的文件删除，然后用三部曲</p><pre><code>hexo cleanhexo ghexo d</code></pre><h2 id="使用Markdown写博客出现的问题"><a href="#使用Markdown写博客出现的问题" class="headerlink" title="使用Markdown写博客出现的问题"></a>使用Markdown写博客出现的问题</h2><h3 id="（1）插入的图片不显示"><a href="#（1）插入的图片不显示" class="headerlink" title="（1）插入的图片不显示"></a>（1）插入的图片不显示</h3><p>根目录下的_config.yml文件中post_asset_folder: false设置为true，以此打开文章资源文件夹功能；当资源文件管理功能打开后，Hexo将会在你每一次通过&nbsp;hexo new 文件名&nbsp;命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个 markdown 文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以把要用到的图片都放在这个里面</p><h3 id="（2）使用-来加粗字体时出现错误"><a href="#（2）使用-来加粗字体时出现错误" class="headerlink" title="（2）使用**来加粗字体时出现错误"></a>（2）使用**来加粗字体时出现错误</h3><p>可能是因为有英文的:或者英文的. 注意换成中文的就可以了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>_config.yml配置文件</title>
       <link href="/2021/10/31/config/"/>
       <url>/2021/10/31/config/</url>

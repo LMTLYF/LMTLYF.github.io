@@ -6,7 +6,7 @@
   <link href="http://liumengting.co/atom.xml" rel="self"/>
   
   <link href="http://liumengting.co/"/>
-  <updated>2021-10-31T15:56:11.170Z</updated>
+  <updated>2021-11-05T04:10:13.419Z</updated>
   <id>http://liumengting.co/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo</title>
+    <link href="http://liumengting.co/2021/11/04/hexo/"/>
+    <id>http://liumengting.co/2021/11/04/hexo/</id>
+    <published>2021-11-04T00:00:00.000Z</published>
+    <updated>2021-11-05T04:10:13.419Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在建个人博客时会用到Hexo，本篇文章将详细介绍Hexo的文件夹和命令，以便之后写博客和主题配置，最后也会写一些我在用markdown写博客时遇到的问题，希望可以帮助到大家。&lt;br&gt;如果想更详细的了解hexo，建议大家去看&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="http://liumengting.co/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="http://liumengting.co/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>_config.yml配置文件</title>
