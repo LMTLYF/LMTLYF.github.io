@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="_config.yml配置文件, HTML,CSS,JavaScript,JQuery,java,linux等">
-    <meta name="description" content="hexo原有的_config.yml（如果在配置出现错误时可以直接复制）">
+    <meta name="keywords" content="C++实现顺序表, HTML,CSS,JavaScript,JQuery,java,linux等">
+    <meta name="description" content="实现顺序表的初始化，取值，输出，插入，删除，查找">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>_config.yml配置文件 | 不吃酸的小柠檬</title>
+    <title>C++实现顺序表 | 不吃酸的小柠檬</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">_config.yml配置文件</h1>
+                    <h1 class="description center-align post-title">C++实现顺序表</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                <span class="chip bg-color">数据结构</span>
+                            </a>
+                        
+                            <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                <span class="chip bg-color">C语言</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%A1%BA%E5%BA%8F%E8%A1%A8/">
+                                <span class="chip bg-color">顺序表</span>
                             </a>
                         
                     </div>
@@ -447,8 +455,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo/" class="post-category">
-                                hexo
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                数据结构
                             </a>
                         
                     </div>
@@ -460,28 +468,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-31
+                    2021-11-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-31
+                    2021-11-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    288
+                    419
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -501,100 +509,97 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>配置_config.yml文件出现错误时，不想删除可以直接复制该文件</p>
-<pre><code># Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
- 
-# Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-email:
-language:
- 
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://liumengting.co
-root: /
-permalink: :year/:month/:day/:title/
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-permalink_defaults:
- 
-# Directory
-source_dir: source
-public_dir: public
- 
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ''
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-highlight:
-  enable: true
-  line_number: true
-  tab_replace:
- 
-# Category &amp; Tag
-default_category: uncategorized
-category_map:
-tag_map:
- 
-# Archives
-## 2: Enable pagination
-## 1: Disable pagination
-## 0: Fully Disable
-archive: 2
-category: 2
-tag: 2
- 
-# Server
-## Hexo uses Connect as a server
-## You can customize the logger format as defined in
-## http://www.senchalabs.org/connect/logger.html
-port: 4000
-server_ip: localhost
-logger: false
-logger_format: dev
- 
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: MMM D YYYY
-time_format: H:mm:ss
- 
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
- 
-# Disqus
-disqus_shortname:
- 
-# Extensions
-## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
-## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: landscape
-exclude_generator:
- 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: git@github.com:LMTLYF/LMTLYF.github.io.git
-  branch: master
+                <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>**1.**因为它整体上没有牵扯指针，对比链表传地址(因为是传地址，所有传递的它是一定有空间的)，这里用引用传自己还是挺合理的（在有所改变时就传引用，如果不需要改变就不用了）</p>
+<p>**2.**结构体里有一个指针类型的存在是为了取空间</p>
+<p>**3.**相对于链表干什么都借助另一个temp，顺序表亲历亲为</p>
+<h3 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h3><h4 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h4><pre><code>#include&lt;stdio.h&gt;
+#define MAX 100
+typedef int ElemType;
+typedef struct {
+    ElemType *elem;
+    int length;//顺序表的长度 
+}Sqlist;
+</code></pre>
+<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><pre><code>Sqlist InitList(Sqlist &amp;L)
+{
+    L.elem=new ElemType[MAX];//相当于数组了 
+    L.length=0;//只是代表长度，因此初始化时让它成为0 
+    return L;
+}
+</code></pre>
+<h4 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h4><pre><code>Sqlist GetList(Sqlist &amp;L,int j)
+{
+    int i;
+    L.length=j;//现在再取也不迟 
+    printf("请输入3个数："); 
+    for(i=0;i&lt;j;i++)
+    {
+        scanf("%d",&amp;L.elem[i]);
+    }
+    return L;
+}
+</code></pre>
+<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><pre><code>void OutList(Sqlist L)
+{
+    int i;
+    int j=L.length;
+    for(i=0;i&lt;j;i++)
+    {
+        printf(" %d",L.elem[i]);
+    }
+}
+</code></pre>
+<h4 id="根据位置查找"><a href="#根据位置查找" class="headerlink" title="根据位置查找"></a>根据位置查找</h4><pre><code>ElemType FindList(Sqlist L,int i)
+{
+    ElemType a=L.elem[i-1];
+    return a;
+}
+</code></pre>
+<h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><pre><code>Sqlist InsertList(int a,ElemType b,Sqlist &amp;L)
+{
+    int j=L.length;
+    if(j==MAX)
+    {
+        printf("当前空间已满");
+    }
+    else
+    {
+        for(j=j-1;j&gt;=a-1;j--)
+        {
+            L.elem[j+1]=L.elem[j];
+        }
+        L.elem[a-1]=b;
+    }
+    L.length++;
+}
+</code></pre>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><pre><code>Sqlist DeleteList(int a,Sqlist &amp;L)
+{
+    int j=L.length;
+    int i;
+    for(i=a-1;i&lt;j;i++)
+    {
+        L.elem[i]=L.elem[i+1];
+    }
+    L.length--;
+    return L;
+} 
+</code></pre>
+<h4 id="整体测试"><a href="#整体测试" class="headerlink" title="整体测试"></a>整体测试</h4><pre><code>int main()
+{
+    Sqlist L=InitList(L);
+    GetList(L,3);
+    OutList(L);
+    int a=FindList(L,2);
+    printf("第二个元素是%d\n",a);
+    InsertList(2,4,L);
+    printf("插入后的值：");
+    OutList(L);
+    DeleteList(2,L);
+    printf("第二个元素被删：");
+    OutList(L); 
+    return 0;
+}
 </code></pre>
 
                 
@@ -622,7 +627,7 @@ deploy:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://liumengting.co/2021/10/31/config/">http://liumengting.co/2021/10/31/config/</a>
+                    <a href="http://liumengting.co/2021/11/20/shun-xu-biao/">http://liumengting.co/2021/11/20/shun-xu-biao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -660,8 +665,16 @@ deploy:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                    <span class="chip bg-color">数据结构</span>
+                                </a>
+                            
+                                <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                    <span class="chip bg-color">C语言</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%A1%BA%E5%BA%8F%E8%A1%A8/">
+                                    <span class="chip bg-color">顺序表</span>
                                 </a>
                             
                         </div>
@@ -1103,31 +1116,31 @@ deploy:
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/11/04/hexo/">
+                <a href="/2021/11/20/xun-huan-lian-biao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Hexo">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="C语言实现循环链表">
                         
-                        <span class="card-title">Hexo</span>
+                        <span class="card-title">C语言实现循环链表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            介绍Hexo中的文件夹，Hexo中的一些命令的使用
+                            实现顺循环链表的初始化，取值，输出，插入，删除，查找
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>11月 4 2021
+                            <i class="far fa-clock fa-fw icon-date"></i>11月 20 2021
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                    数据结构
                                 </a>
                             
                             
@@ -1137,8 +1150,16 @@ deploy:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/">
+                        <span class="chip bg-color">循环链表</span>
                     </a>
                     
                 </div>
@@ -1152,31 +1173,31 @@ deploy:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/31/web-language/">
+                <a href="/2021/11/20/dan-lian-biao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="网页设计语言">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="C语言实现单链表">
                         
-                        <span class="card-title">网页设计语言</span>
+                        <span class="card-title">C语言实现单链表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在web网页设计中遇到的语言，了解它们的关系和区别
+                            实现单链表的初始化，赋值，插入，删除，寻找，输出
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>10月 31 2021
+                                <i class="far fa-clock fa-fw icon-date"></i>11月 20 2021
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web/" class="post-category">
-                                    web
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                    数据结构
                                 </a>
                             
                             
@@ -1186,8 +1207,16 @@ deploy:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/web/">
-                        <span class="chip bg-color">web</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/">
+                        <span class="chip bg-color">单链表</span>
+                    </a>
+                    
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
                     </a>
                     
                 </div>

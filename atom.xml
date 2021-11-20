@@ -6,7 +6,7 @@
   <link href="http://liumengting.co/atom.xml" rel="self"/>
   
   <link href="http://liumengting.co/"/>
-  <updated>2021-11-05T04:10:13.419Z</updated>
+  <updated>2021-11-20T11:35:10.514Z</updated>
   <id>http://liumengting.co/</id>
   
   <author>
@@ -17,11 +17,127 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C语言实现双向链表</title>
+    <link href="http://liumengting.co/2021/11/20/shuang-xiang-lian-biao/"/>
+    <id>http://liumengting.co/2021/11/20/shuang-xiang-lian-biao/</id>
+    <published>2021-11-20T03:56:22.000Z</published>
+    <updated>2021-11-20T11:35:10.514Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构" scheme="http://liumengting.co/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="数据结构" scheme="http://liumengting.co/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="C语言" scheme="http://liumengting.co/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="双向链表" scheme="http://liumengting.co/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言实现循环链表</title>
+    <link href="http://liumengting.co/2021/11/20/xun-huan-lian-biao/"/>
+    <id>http://liumengting.co/2021/11/20/xun-huan-lian-biao/</id>
+    <published>2021-11-20T03:56:22.000Z</published>
+    <updated>2021-11-20T11:33:54.188Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构" scheme="http://liumengting.co/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="数据结构" scheme="http://liumengting.co/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="C语言" scheme="http://liumengting.co/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="循环链表" scheme="http://liumengting.co/tags/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++实现顺序表</title>
+    <link href="http://liumengting.co/2021/11/20/shun-xu-biao/"/>
+    <id>http://liumengting.co/2021/11/20/shun-xu-biao/</id>
+    <published>2021-11-20T03:56:22.000Z</published>
+    <updated>2021-11-20T04:22:47.271Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构" scheme="http://liumengting.co/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="数据结构" scheme="http://liumengting.co/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="C语言" scheme="http://liumengting.co/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="顺序表" scheme="http://liumengting.co/tags/%E9%A1%BA%E5%BA%8F%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言实现单链表</title>
+    <link href="http://liumengting.co/2021/11/20/dan-lian-biao/"/>
+    <id>http://liumengting.co/2021/11/20/dan-lian-biao/</id>
+    <published>2021-11-20T02:11:26.000Z</published>
+    <updated>2021-11-20T02:32:14.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;经验总结&quot;&gt;&lt;a href=&quot;#经验总结&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构" scheme="http://liumengting.co/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="数据结构" scheme="http://liumengting.co/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="单链表" scheme="http://liumengting.co/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
+    
+    <category term="C语言" scheme="http://liumengting.co/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo</title>
     <link href="http://liumengting.co/2021/11/04/hexo/"/>
     <id>http://liumengting.co/2021/11/04/hexo/</id>
     <published>2021-11-04T00:00:00.000Z</published>
-    <updated>2021-11-05T04:10:13.419Z</updated>
+    <updated>2021-11-20T11:37:15.860Z</updated>
     
     
       
@@ -37,7 +153,7 @@
     <category term="Hexo" scheme="http://liumengting.co/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="http://liumengting.co/tags/Hexo/"/>
+    <category term="hexo" scheme="http://liumengting.co/tags/hexo/"/>
     
   </entry>
   
