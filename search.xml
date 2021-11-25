@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>C语言实现顺序表</title>
+      <link href="/2021/11/20/shun-xu-biao/"/>
+      <url>/2021/11/20/shun-xu-biao/</url>
+      
+        <content type="html"><![CDATA[<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p><strong>1.</strong> 引用只有在C++中可以使用，用C语言实现要用到传地址</p><p><strong>2.</strong> Sqlist* 就直接可以代表传空间的类型了，只需要把整体都转化成转地址的</p><p><strong>3.</strong> 顺序表类似数组，数组的空间该取还是要取</p><h3 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h3><h4 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h4><pre><code>#include&lt;stdio.h&gt;#define MAX 100typedef int ElemType;typedef struct {    ElemType *elem;    int length;//顺序表的长度 }Sqlist;</code></pre><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><pre><code>Sqlist* InitList(){    Sqlist* L=(Sqlist*)malloc(sizeof(Sqlist));    L-&gt;elem=(ElemType*)malloc(sizeof(ElemType)*MAX);//注意类型，巧妙取了空间    L-&gt;length=0;//只是代表长度，因此初始化时让它成为0     return L;}</code></pre><h4 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h4><pre><code>Sqlist* GetList(Sqlist* L,int j){    int i;    L-&gt;length=j;//现在再取也不迟     printf("请输入3个数：");     for(i=0;i&lt;j;i++)    {        scanf("%d",&amp;L-&gt;elem[i]);    }    return L;}</code></pre><h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><pre><code>void OutList(Sqlist* L){    int i;    int j=L-&gt;length;    for(i=0;i&lt;j;i++)    {        printf(" %d",L-&gt;elem[i]);    }    printf("\n");}</code></pre><h4 id="根据位置查找"><a href="#根据位置查找" class="headerlink" title="根据位置查找"></a>根据位置查找</h4><pre><code>ElemType FindList(Sqlist* L,int i){    ElemType a=L-&gt;elem[i-1];    return a;}</code></pre><h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><pre><code>Sqlist* InsertList(int a,ElemType b,Sqlist* L){    int j=L-&gt;length;    if(j==MAX)    {        printf("当前空间已满");    }    else    {        for(j=j-1;j&gt;=a-1;j--)        {            L-&gt;elem[j+1]=L-&gt;elem[j];        }        L-&gt;elem[a-1]=b;    }    L-&gt;length++;    return L;}</code></pre><h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><pre><code>Sqlist* DeleteList(int a,Sqlist* L){    int j=L-&gt;length;    int i;    for(i=a-1;i&lt;j;i++)    {        L-&gt;elem[i]=L-&gt;elem[i+1];    }    L-&gt;length--;    return L;} </code></pre><h4 id="整体测试"><a href="#整体测试" class="headerlink" title="整体测试"></a>整体测试</h4><pre><code>int main(){    Sqlist L=InitList();    GetList(L,3);    OutList(L);    int a=FindList(L,2);    printf("第二个元素是%d\n",a);    InsertList(2,4,L);    printf("插入后的值：");    OutList(L);    DeleteList(2,L);    printf("第二个元素被删：");    OutList(L);     return 0;}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> C语言 </tag>
+            
+            <tag> 顺序表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言实现双向链表</title>
       <link href="/2021/11/20/shuang-xiang-lian-biao/"/>
       <url>/2021/11/20/shuang-xiang-lian-biao/</url>
@@ -54,35 +83,6 @@
             <tag> C语言 </tag>
             
             <tag> 循环链表 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>C++实现顺序表</title>
-      <link href="/2021/11/20/shun-xu-biao/"/>
-      <url>/2021/11/20/shun-xu-biao/</url>
-      
-        <content type="html"><![CDATA[<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>**1.**因为它整体上没有牵扯指针，对比链表传地址(因为是传地址，所有传递的它是一定有空间的)，这里用引用传自己还是挺合理的（在有所改变时就传引用，如果不需要改变就不用了）</p><p>**2.**结构体里有一个指针类型的存在是为了取空间</p><p>**3.**相对于链表干什么都借助另一个temp，顺序表亲历亲为</p><h3 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h3><h4 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h4><pre><code>#include&lt;stdio.h&gt;#define MAX 100typedef int ElemType;typedef struct {    ElemType *elem;    int length;//顺序表的长度 }Sqlist;</code></pre><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><pre><code>Sqlist InitList(Sqlist &amp;L){    L.elem=new ElemType[MAX];//相当于数组了     L.length=0;//只是代表长度，因此初始化时让它成为0     return L;}</code></pre><h4 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h4><pre><code>Sqlist GetList(Sqlist &amp;L,int j){    int i;    L.length=j;//现在再取也不迟     printf("请输入3个数：");     for(i=0;i&lt;j;i++)    {        scanf("%d",&amp;L.elem[i]);    }    return L;}</code></pre><h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><pre><code>void OutList(Sqlist L){    int i;    int j=L.length;    for(i=0;i&lt;j;i++)    {        printf(" %d",L.elem[i]);    }}</code></pre><h4 id="根据位置查找"><a href="#根据位置查找" class="headerlink" title="根据位置查找"></a>根据位置查找</h4><pre><code>ElemType FindList(Sqlist L,int i){    ElemType a=L.elem[i-1];    return a;}</code></pre><h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><pre><code>Sqlist InsertList(int a,ElemType b,Sqlist &amp;L){    int j=L.length;    if(j==MAX)    {        printf("当前空间已满");    }    else    {        for(j=j-1;j&gt;=a-1;j--)        {            L.elem[j+1]=L.elem[j];        }        L.elem[a-1]=b;    }    L.length++;}</code></pre><h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><pre><code>Sqlist DeleteList(int a,Sqlist &amp;L){    int j=L.length;    int i;    for(i=a-1;i&lt;j;i++)    {        L.elem[i]=L.elem[i+1];    }    L.length--;    return L;} </code></pre><h4 id="整体测试"><a href="#整体测试" class="headerlink" title="整体测试"></a>整体测试</h4><pre><code>int main(){    Sqlist L=InitList(L);    GetList(L,3);    OutList(L);    int a=FindList(L,2);    printf("第二个元素是%d\n",a);    InsertList(2,4,L);    printf("插入后的值：");    OutList(L);    DeleteList(2,L);    printf("第二个元素被删：");    OutList(L);     return 0;}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> C语言 </tag>
-            
-            <tag> 顺序表 </tag>
             
         </tags>
       
