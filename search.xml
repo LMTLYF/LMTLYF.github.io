@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>C语言实现顺序栈</title>
+      <link href="/2021/12/02/shun-xu-zhan/"/>
+      <url>/2021/12/02/shun-xu-zhan/</url>
+      
+        <content type="html"><![CDATA[<h3 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a>经验总结</h3><p><strong>1、</strong>顺序栈只是存储空间是有一定顺序的，并不是像顺序表那样，直接用数组来存<br><strong>2、</strong>S-&gt;top可以直接自增自减是因为在初始化时已经取了连续的空间，链栈可就不能这样干了</p><h3 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h3><h4 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h4><pre><code>#include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;#define MAX 100typedef int ElemType;typedef struct{    ElemType *base;    ElemType *top;    int size;}stack;</code></pre><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><pre><code>stack* initstack()//初始化栈 {    stack* S=(stack*)malloc(sizeof(stack));    S-&gt;base=(ElemType*)malloc(sizeof(ElemType)*MAX);    S-&gt;top=S-&gt;base;//不同于顺序表直接用数组来存，这里把责任推给了栈顶指针，栈底指针不变     S-&gt;size=MAX;    return S;}</code></pre><h4 id="入栈"><a href="#入栈" class="headerlink" title="入栈"></a>入栈</h4><pre><code>stack* push(stack* S,ElemType e)//入栈 {    *S-&gt;top++=e;//因为空间已经取好了，才能这样直接加，链栈可就不能了     return S;}</code></pre><h4 id="出栈"><a href="#出栈" class="headerlink" title="出栈"></a>出栈</h4><pre><code>void pop(stack* S)//出栈 {    ElemType e;    e=*--S-&gt;top;    printf("%d ",e);}</code></pre><h4 id="取栈顶元素"><a href="#取栈顶元素" class="headerlink" title="取栈顶元素"></a>取栈顶元素</h4><pre><code>ElemType gettop(stack* S){    ElemType e=*(S-&gt;top-1);//以这样-1的方式没有改变地址     return e;}</code></pre><h4 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h4><pre><code>int main(){    stack* S=initstack();    int b;    printf("输入你想要的长度：");    scanf("%d",&amp;b);    int i;    for(i=0;i&lt;b;i++)    {        push(S,i+1);    }    ElemType e=gettop(S);    printf("栈顶元素是：%d\n",e);    int j;    printf("输出：");    for(j=0;j&lt;b;j++)    {        pop(S);    }    return 0;}</code></pre><p>以上代码都省略了简单的异常处理机制 </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> C语言 </tag>
+            
+            <tag> 顺序栈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言实现双向链表</title>
       <link href="/2021/11/20/shuang-xiang-lian-biao/"/>
       <url>/2021/11/20/shuang-xiang-lian-biao/</url>
@@ -22,9 +51,9 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> C语言 </tag>
-            
             <tag> 双向链表 </tag>
+            
+            <tag> C语言 </tag>
             
         </tags>
       
@@ -109,9 +138,9 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> 单链表 </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> 单链表 </tag>
             
         </tags>
       
