@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2022/03/16/test/"/>
+      <url>/2022/03/16/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>显示图标</title>
+      <link href="/2021/12/02/xian-shi-tu-biao/"/>
+      <url>/2021/12/02/xian-shi-tu-biao/</url>
+      
+        <content type="html"><![CDATA[<h3 id="配置eclipse环境"><a href="#配置eclipse环境" class="headerlink" title="配置eclipse环境"></a>配置eclipse环境</h3><pre><code>tar -zxvf /mnt/hgfs/Share/eclipse/eclipse-jee -C /usr/local/ //解压到指定环境中，如果双击可以打开就成功了不行的话，就创建硬链接，把jdk1.8/jdk1.8.0_144/bin放入到eclipse/jre中（主要是其中的java文件夹）cd /usr/local/eclipse //进入其中，为了创建文件夹mkdir jre //创建相应的目录cd jre //进入其中，才能创建链接ln -s /usr/lib/jdk1.8/jdk1.8.0_144/bin bin //创建成功</code></pre><h3 id="桌面上出现可视化图标"><a href="#桌面上出现可视化图标" class="headerlink" title="桌面上出现可视化图标"></a>桌面上出现可视化图标</h3><pre><code>cd /usr/share/applications //在该目录下添加eclipse.desktop，把eclipse加到桌面vim eclipse.desktop //编辑该文件在文件里复制一下代码 [Desktop Entry] Encoding=UTF-8 Name=eclipse Comment=Eclipse IDE Exec=/opt/eclipse/eclipse         Icon=/opt/eclipse/icon.xpm Terminal=false starttupNotify=true Type=ApplicationCategories=Application;Development;</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言实现顺序栈</title>
       <link href="/2021/12/02/shun-xu-zhan/"/>
       <url>/2021/12/02/shun-xu-zhan/</url>
