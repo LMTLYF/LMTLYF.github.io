@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Ubuntu基本命令</title>
+      <link href="/2022/03/24/ubuntu-ji-ben-ming-ling/"/>
+      <url>/2022/03/24/ubuntu-ji-ben-ming-ling/</url>
+      
+        <content type="html"><![CDATA[<h2 id="关机，重启"><a href="#关机，重启" class="headerlink" title="关机，重启"></a>关机，重启</h2><h3 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h3><pre><code>shutdown -h now //立刻关机shutdown -h 5 //5分钟后关机poweroff //立刻关机</code></pre><h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><pre><code>shutdown -r now //立刻重启shutdown -r 5 //5分钟后重启reboot //立刻重启</code></pre><h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><h3 id="help"><a href="#help" class="headerlink" title="help"></a>help</h3><pre><code>命令 --help</code></pre><h3 id="man"><a href="#man" class="headerlink" title="man"></a>man</h3><pre><code>man 命令</code></pre><h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><h3 id="切换目录"><a href="#切换目录" class="headerlink" title="切换目录"></a>切换目录</h3><pre><code>cd ~ //切换到home目录cd- //切换到上次访问的目录</code></pre><h3 id="目录图"><a href="#目录图" class="headerlink" title="目录图"></a>目录图</h3><p><img src="Ubuntu%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/6.png"></p><h2 id="重命名，复制文件"><a href="#重命名，复制文件" class="headerlink" title="重命名，复制文件"></a>重命名，复制文件</h2><h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><pre><code>mv 源目录 目标目录 </code></pre><p>注意：这是移动一个文件，只有一个；移动到了目标目录之下，所以目标目录要存在</p><h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><pre><code>cp -r 源目录 目标目录</code></pre><p>注意：这是复制文件，有两个文件；也是在目标目录之下（如果是要改名的话，要复制最底部的那一个）</p><h2 id="文件（增删改查）"><a href="#文件（增删改查）" class="headerlink" title="文件（增删改查）"></a>文件（增删改查）</h2><h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><pre><code>touch 文件名 //新建了一个空文件vim 文件名 //如果没有也就新建了一个文件</code></pre><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><pre><code>rm -rf</code></pre><h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>这里是vim的常用命令</p><pre><code>dd //删除当前行5dd //删除包括当前及以下共5行yy //复制当前行5yy //复制当前及以下共5行p //粘贴，粘贴的时候是在该光标的下面</code></pre><h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><pre><code>cat //只显示了最后一页more //回车下一行，空格下一页，q结束查看less //PgUp,PgDn翻页，q结束查看tail -n //指定了是结尾的几行，ctrl+c结束head -n //指定了是开头的几行，ctrl+c结束</code></pre><h2 id="压缩和解压缩"><a href="#压缩和解压缩" class="headerlink" title="压缩和解压缩"></a>压缩和解压缩</h2><h3 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h3><pre><code>tar -zcvf 压缩后文件名 要压缩文件名 //压缩，解压也是解压到了某文件夹的下面</code></pre><h3 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h3><pre><code>tar -zxvf 要解压文件名 -C 解压后文件名 //解压</code></pre><h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><pre><code>&gt;：将本来出现在屏幕的标准输出信息重定向到一个文件中&gt;&gt;：实现重定向时不覆盖原有内容，而是在文件末尾追加内容</code></pre><h2 id="软硬链接"><a href="#软硬链接" class="headerlink" title="软硬链接"></a>软硬链接</h2><h3 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h3><p>软链接（符号链接）：相当于电脑上的快捷方式，B是A的软链接，A消失了B无效，B消失了对A并没有影响</p><pre><code>ln -s 文件 软链接的名字</code></pre><h3 id="硬链接"><a href="#硬链接" class="headerlink" title="硬链接"></a>硬链接</h3><p>硬链接：有点类似于复制，主要是防止误删，B是A的硬链接，只有二者都被删了，文件才会消失</p><pre><code>ln 文件 硬链接的名字</code></pre><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h3 id="查看文件详细属性"><a href="#查看文件详细属性" class="headerlink" title="查看文件详细属性"></a>查看文件详细属性</h3><pre><code>ls -al //查看所有的文件，还有以.开头的隐藏文件ls -l //查看所有文件，不过没有隐藏文件</code></pre><h3 id="理解字符含义"><a href="#理解字符含义" class="headerlink" title="理解字符含义"></a>理解字符含义</h3><p>第一个：<br>d:目录<br>-:文件<br>l:链接文档<br>b:装置文件里面的可供储存的接口设备(可随机存取装置)<br>c:装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)<br>剩余的（三个一组）：<br>分别是文件所有者，文件所有者所在的组中其他用户，其他用户</p><h3 id="修改文件所属主"><a href="#修改文件所属主" class="headerlink" title="修改文件所属主"></a>修改文件所属主</h3><pre><code>chown [–R] 属主名 文件名 //-R是下面的也都改了</code></pre><h3 id="修改文件所属组"><a href="#修改文件所属组" class="headerlink" title="修改文件所属组"></a>修改文件所属组</h3><pre><code>chgrp [-R] 属组名 文件名 </code></pre><h3 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h3><h4 id="数字进行修改"><a href="#数字进行修改" class="headerlink" title="数字进行修改"></a>数字进行修改</h4><pre><code>r:4  w:2  x:1owner = rwx = 4+2+1 = 7group = rwx = 4+2+1 = 7others= --- = 0+0+0 = 0chmod -R 770 文件或目录 //加了R连目录下面的都一起更改了</code></pre><h4 id="字符进行修改"><a href="#字符进行修改" class="headerlink" title="字符进行修改"></a>字符进行修改</h4><pre><code>user(u)：所有者 group(g)：组 others(o)：其他 直接进行+ - = 操作chmod -R u=rwx,g=rx,o=r  文件或者目录</code></pre><h2 id="理解用户和组"><a href="#理解用户和组" class="headerlink" title="理解用户和组"></a>理解用户和组</h2><h3 id="多用户多组"><a href="#多用户多组" class="headerlink" title="多用户多组"></a>多用户多组</h3><p>linux本来就是多用户多任务的操作系统，其他人可能会远程使用你的电脑，这时候我们就可以创建一个用户让他来登录；根据该用户的作用我们可以把它分到不同的组</p><h3 id="查看用户"><a href="#查看用户" class="headerlink" title="查看用户"></a>查看用户</h3><p>注意：不能通过命令来看，自能看文件<br>用户（user）相关的配置文件；<br>/etc/passwd  //用户（user）的配置文件；<br>/etc/shadow  //用户（user）影子口令文件；<br>/etc/passwd<br><img src="Ubuntu%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/1.png"><br>用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell<br>口令：其实就是密码，为了安全这里用x来表示<br>用户标识号：可能多个用户会有一样的标识号，但是它们的主目录和登录shell应该不同<br>登录shell：默认是nologin<br>/etc/shadow<br><img src="Ubuntu%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/2.png"><br>用户名：密码加密：密码已经使用的日期（1970-01-01开始）：密码多少天后可以修改：多少天后必须修改：修改之前几天提醒：未修改延长几天：时间过期：保留字段</p><h3 id="查看组"><a href="#查看组" class="headerlink" title="查看组"></a>查看组</h3><p>用户组（group）相关的配置文件；<br>/etc/group //用户组（group）配置文件；<br>/etc/gshadow //用户组（group）的影子文件；<br>/etc/group<br><img src="Ubuntu%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/3.png"><br>组名:口令:组标识号:组内用户列表（多个的用户用，隔开）<br>/etc/gshadow<br><img src="Ubuntu%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/4.png"><br>用户组：用户组密码：用户组管理者：组成员（多个成员用，隔开）<br>用户组密码：如果是空的或有!，表示没有密码；<br>用户组管理者：这个字段也可为空，如果有多个用户组管理者，用,号分割；<br>组成员：如果有多个成员，用,号分割；</p><h2 id="用户相关操作"><a href="#用户相关操作" class="headerlink" title="用户相关操作"></a>用户相关操作</h2><h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><pre><code>useradd 选项 用户名 （选项的出现其实和其配置文件有很大关系的）-c comment 指定一段注释性描述-d 目录 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录。-g 用户组 指定用户所属的用户组。-G 用户组，用户组 指定用户所属的附加组。-s Shell文件 指定用户的登录Shell。-u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号。</code></pre><h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><pre><code>userdel 选项 用户名 （常用选项-r 直接将其主目录也删除）</code></pre><h3 id="修改用户"><a href="#修改用户" class="headerlink" title="修改用户"></a>修改用户</h3><pre><code>usermod 选项 用户名 （和添加用户的选项一样）</code></pre><h3 id="密码（口令）管理"><a href="#密码（口令）管理" class="headerlink" title="密码（口令）管理"></a>密码（口令）管理</h3><pre><code>passwd 选项 用户名-l 锁定口令，即禁用账号。-u 口令解锁。-d 使账号无口令。-f 强迫用户下次登录时修改口令</code></pre><h2 id="组相关操作"><a href="#组相关操作" class="headerlink" title="组相关操作"></a>组相关操作</h2><h3 id="新建用户组"><a href="#新建用户组" class="headerlink" title="新建用户组"></a>新建用户组</h3><pre><code>groupadd 选项 用户组-g GID 指定新用户组的组标识号（GID）。-o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同</code></pre><h3 id="删除用户组"><a href="#删除用户组" class="headerlink" title="删除用户组"></a>删除用户组</h3><pre><code>groupdel 用户组</code></pre><h3 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a>修改用户组</h3><pre><code>groupmod 选项 用户组-g GID 为用户组指定新的组标识号。-o 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。-n 将用户组的名字改为新名字</code></pre><h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><p>服务(service) 本质就是进程，但是是运行在后台的，不受前台和终端的控制，周期性的执行一些事情，比如(mysql , sshd  防火墙等)，因此我们又称为守护进程。<br>查看服务</p><h3 id="查看服务"><a href="#查看服务" class="headerlink" title="查看服务"></a>查看服务</h3><pre><code>/etc/init.d目录下有众多的服务service --status-all //可以查看服务的运行状况</code></pre><h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><pre><code>service 服务名 start|stop|restart|reload|status</code></pre><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>以下载并管理mysql为例子，在后面会有</p><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>进程就是当前正在执行的一些程序</p><h3 id="查询进程"><a href="#查询进程" class="headerlink" title="查询进程"></a>查询进程</h3><pre><code>ps -aux</code></pre><p><img src="Ubuntu%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/5.png"><br>USER: 进程拥有者<br>PID: pid<br>%CPU: 占用的 CPU 使用率<br>%MEM: 占用的记忆体使用率<br>VSZ: 占用的虚拟记忆体大小（virtual）<br>RSS: 占用的记忆体大小（true）<br>TTY: 终端的次要装置号码 (minor device number of tty)<br>STAT: 该行程的状态:<br>D: 无法中断的休眠状态 (通常 IO 的进程)<br>R: 正在执行中<br>S: 静止状态<br>T: 暂停执行<br>Z: 不存在但暂时无法消除（僵尸状态）<br>W: 没有足够的记忆体分页可分配<br>&lt;: 高优先序的行程<br>N:低优先序的进程<br>L：有记忆体分页分配并锁在记忆体内（实时系统或AI/O）<br>START:行程开始时间<br>TIME:执行的时间<br>COMMAND:所执行的指令</p><h3 id="以树状图查看"><a href="#以树状图查看" class="headerlink" title="以树状图查看"></a>以树状图查看</h3><pre><code>pstree -u //以用户来查看pstree -p //以id来查看</code></pre><h3 id="实时显示进程"><a href="#实时显示进程" class="headerlink" title="实时显示进程"></a>实时显示进程</h3><pre><code>top -选项选项d：指定每两次屏幕信息刷新之间的时间间隔。当然用户可以使用s交互命令来改变之。p:通过指定监控进程ID来仅仅监控某个进程的状态。q:该选项将使top没有任何延迟的进行刷新。如果调用程序有超级用户权限，那么top将以尽可能高的优先级运行。S：指定累计模式。s：使top命令在安全模式中运行。这将去除交互命令所带来的潜在危险。i：使top不显示任何闲置或者僵死进程。c:显示整个命令行而不只是显示命令名。交互指令top命令进入之后可以进行的一些操作命令p以CPU使用率排序（默认）M以内存使用率排序N以PID排序q退出</code></pre><h3 id="终止进程"><a href="#终止进程" class="headerlink" title="终止进程"></a>终止进程</h3><pre><code>kill -选项 进程号（-9强制）killall 进程名称</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言实现顺序栈</title>
       <link href="/2021/12/02/shun-xu-zhan/"/>
       <url>/2021/12/02/shun-xu-zhan/</url>
@@ -51,9 +80,9 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> 双向链表 </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> 双向链表 </tag>
             
         </tags>
       
@@ -138,9 +167,9 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> C语言 </tag>
-            
             <tag> 单链表 </tag>
+            
+            <tag> C语言 </tag>
             
         </tags>
       
