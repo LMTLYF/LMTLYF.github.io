@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C语言实现循环链表, HTML,CSS,JavaScript,JQuery,java,linux等">
-    <meta name="description" content="实现顺循环链表的初始化，取值，输出，插入，删除，查找">
+    <meta name="keywords" content="MyBatis中常见知识点, HTML,CSS,JavaScript,JQuery,java,linux等">
+    <meta name="description" content="Mybatis中常见知识点，数据库字段名和变量名不一样、参数占位符、特殊字符、传多个参数、动态SQL">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C语言实现循环链表 | 不吃酸的小柠檬</title>
+    <title>MyBatis中常见知识点 | 不吃酸的小柠檬</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C语言实现循环链表</h1>
+                    <h1 class="description center-align post-title">MyBatis中常见知识点</h1>
                 </div>
             </div>
         </div>
@@ -435,16 +435,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
+                            <a href="/tags/MyBatis/">
+                                <span class="chip bg-color">MyBatis</span>
                             </a>
                         
-                            <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                                <span class="chip bg-color">C语言</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/">
-                                <span class="chip bg-color">循环链表</span>
+                            <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">基础</span>
                             </a>
                         
                     </div>
@@ -455,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                数据结构
+                            <a href="/categories/git/" class="post-category">
+                                git
                             </a>
                         
                     </div>
@@ -468,21 +464,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-20
+                    2022-03-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-20
+                    2022-03-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    782
+                    1k
                 </div>
                 
 
@@ -509,201 +505,148 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>1、</strong>循环链表要注意长度的变化，不要过早的变长度，后面可能还会用到</p>
-<p><strong>2、</strong>在求余刚好为0就要注意了</p>
-<h3 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h3><h4 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h4><pre><code>#include&lt;stdio.h&gt;
-#include&lt;stdlib.h&gt;
-typedef int ElemType;
-typedef struct link{
-    ElemType elem;
-    struct link *next;
-    int length;//多了长度是因为之后在插入时还要判断 
-}link,*list; 
+                <h2 id="数据库字段名和实体类变量名不一样"><a href="#数据库字段名和实体类变量名不一样" class="headerlink" title="数据库字段名和实体类变量名不一样"></a>数据库字段名和实体类变量名不一样</h2><p>如果数据库字段名和实体类的变量名不一样，读出来是null</p>
+<h3 id="改别名"><a href="#改别名" class="headerlink" title="改别名"></a>改别名</h3><p>缺点：如果字段非常多，就比较难改<br>优点：适用于字段比较少，比较方便</p>
+<pre><code>brand_name as brandName,company_name as companyName；将数据库的字段名改成实体类的变量名
 </code></pre>
-<h4 id="初始化并取值"><a href="#初始化并取值" class="headerlink" title="初始化并取值"></a>初始化并取值</h4><pre><code>list Initlink()//初始化并赋值（后插法） 
-{
-    list p=(list)malloc(sizeof(link));
-    p-&gt;next=NULL;
-    printf("输入你想要创建的长度：");
-    scanf("%d",&amp;p-&gt;length);
-    int i;
-    list temp=p;
-    for(i=1;i&lt;=p-&gt;length;i++)
-    {
-        list a=(list)malloc(sizeof(link));
-        if(a==NULL)
-        {
-            printf("没有取到空间\n");
-        }
-        else
-        {
-            a-&gt;next=NULL;
-            a-&gt;elem=i;
-            temp-&gt;next=a;
-            temp=a;
-        }
-    }
-    temp-&gt;next=p;
-    return p;
-}
-list initlink()//初始化并赋值（前插法） 
-{
-    list p=(list)malloc(sizeof(link));
-    p-&gt;next=NULL;
-    printf("输入你想要的长度：");
-    scanf("%d",&amp;p-&gt;length);
-    int i;
-    list d;
-    for(i=1;i&lt;=p-&gt;length;i++)
-    {
-        list temp=p;
-        list a=(list)malloc(sizeof(link));
-        a-&gt;next=NULL;
-        a-&gt;elem=i;
-        a-&gt;next=temp-&gt;next;
-        temp-&gt;next=a;
-        if(a-&gt;elem==1)//注意呀，你最后的一个，应该是插入的第一个 
-        {
-            d=a;
-        }
-    }
-    d-&gt;next=p;
-    return p;
- } 
+<h3 id="利用sql字段"><a href="#利用sql字段" class="headerlink" title="利用sql字段"></a>利用sql字段</h3><p>缺点：不灵活，如果只是用其中的几个字段，不好分离出来<br>优点：如果老是重复多次使用某一字段就可以选择这种</p>
+<pre><code>&lt;mapper namespace="com.example.mapper.BrandMapper"&gt;
+    &lt;sql id="sql1"&gt;
+        id,brand_name as brandName,company_name as companyName,ordered,description,status
+    &lt;/sql&gt;
+    &lt;select id="selectAll"  resultType="com.example.pojo.Brand"&gt;
+        select &lt;include refid="sql1"/&gt; //引用这一字段
+        from tb_brand;
+    &lt;/select&gt;
+&lt;/mapper&gt;
 </code></pre>
-<h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><pre><code>list Insert(list p,int add,ElemType elem)//插入 
-{
-    list a=(list)malloc(sizeof(link));
-    a-&gt;next=NULL;
-    a-&gt;elem=elem;
-    //p-&gt;length++;后面还要用呢 
-    list temp=p;
-    int b=add%p-&gt;length;
-    int i;
-    if(b==0)
-    {
-        for(i=1;i&lt;=p-&gt;length-1;i++)
-        {
-            temp=temp-&gt;next;
-        }
-    }
-    else
-    {
-        for(i=1;i&lt;=b-1;i++)
-        {
-            temp=temp-&gt;next;
-        }
-    }
-    a-&gt;next=temp-&gt;next;
-    temp-&gt;next=a;
-    p-&gt;length++;
-    return 0;
-}
+<h3 id="resultMap"><a href="#resultMap" class="headerlink" title="resultMap"></a>resultMap</h3><p>优点：非常灵活，它自己会进行映射</p>
+<pre><code>&lt;mapper namespace="com.example.mapper.BrandMapper"&gt;
+   &lt;resultMap id="resultMap1" type="brand"&gt;
+       &lt;result column="brand_name" property="brandName"&gt;&lt;/result&gt;
+       &lt;result column="company_name" property="brandName"&gt;&lt;/result&gt;
+   &lt;/resultMap&gt;
+    &lt;select id="selectAll"  resultMap="resultMap1"&gt;
+        select *
+        from tb_brand;
+    &lt;/select&gt;
+&lt;/mapper&gt;
+用法：
+&lt;resultMap &gt;&lt;/resultMap&gt;中有&lt;id&gt;&lt;/id&gt;子标签，用于映射主键；&lt;result&gt;&lt;/result&gt;用于映射普通键
+要记得把&lt;select&gt;&lt;/select&gt;中的resultType改成resultMap
 </code></pre>
-<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><pre><code>list Delete(list p,int add)//删除某一结点 
-{
-    //p-&gt;length--;不放这个位置是后面还要用之前的值，这样一放可不就没有了 
-    list temp=p;
-    list t;
-    int b=add%p-&gt;length;
-    int i;
-    if(b==0)
-    {
-        for(i=1;i&lt;=p-&gt;length-1;i++)//与双向链表不同，要有前一个 
-        {
-            temp=temp-&gt;next;
-        }
-    }
-    else
-    {
-        for(i=1;i&lt;=b-1;i++)
-        {
-            temp=temp-&gt;next; 
-        }
-    }
-    t=temp-&gt;next;
-    temp-&gt;next=temp-&gt;next-&gt;next;
-    free(t);
-    p-&gt;length--; 
-    return p;
-}
+<h2 id="参数占位符"><a href="#参数占位符" class="headerlink" title="参数占位符"></a>参数占位符</h2><pre><code>1.#{ }：会将其参数值替换为？，防止sql注入
+2.${ }：直接拼参数值
+3.使用时机：
+参数传递的时候：#{ }
+表名或者列名不确定的时候，进行拼接：${ }
 </code></pre>
-<h4 id="根据位置找元素"><a href="#根据位置找元素" class="headerlink" title="根据位置找元素"></a>根据位置找元素</h4><pre><code>ElemType Find(list p,int add)//根据位置来找 
-{
-    list temp=p;
-    int b=add%p-&gt;length;
-    int i;
-    if(b==0)
-    {
-        for(i=1;i&lt;=p-&gt;length;i++)
-        {
-            temp=temp-&gt;next;
-        }
-        return temp-&gt;elem;
-    }
-    else
-    {
-        for(i=1;i&lt;=b;i++)
-        {
-            temp=temp-&gt;next;
-        }
-        return temp-&gt;elem;
-    }
-}
+<h2 id="特殊字符处理"><a href="#特殊字符处理" class="headerlink" title="特殊字符处理"></a>特殊字符处理</h2><h3 id="使用转义字符"><a href="#使用转义字符" class="headerlink" title="使用转义字符"></a>使用转义字符</h3><p><img src="MyBatis%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86%E7%82%B9/1.png"><br><img src="MyBatis%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86%E7%82%B9/2.png"></p>
+<h3 id="CDATA区"><a href="#CDATA区" class="headerlink" title="CDATA区"></a>CDATA区</h3><p>用法：CD一写然后回车，就会发现出现了一个这样的区域，把符号填进去就行了</p>
+<pre><code>&lt;select id="selectAllById" resultMap="resultMap1"&gt;
+    select *
+    from tb_brand
+    where id &lt;![CDATA[
+    &lt;
+    ]]&gt; #{id};
+&lt;/select&gt;
 </code></pre>
-<h4 id="根据元素找位置"><a href="#根据元素找位置" class="headerlink" title="根据元素找位置"></a>根据元素找位置</h4><pre><code>int find(list p,ElemType elem)//根据元素来查找 
-{
-    list temp=p;
-    int i;
-    int b=0;
-    for(i=1;i&lt;=p-&gt;length;i++)
-    {
-        temp=temp-&gt;next;
-        if(temp-&gt;elem==elem)
-        {
-            b=1;
-            break;
-        }
-    }
-    if(b==0)
-    {
-        return -1;
-    }
-    else
-    {
-        return i;
-    }
-}
+<h2 id="多条件查询传参的方法"><a href="#多条件查询传参的方法" class="headerlink" title="多条件查询传参的方法"></a>多条件查询传参的方法</h2><h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><p>注意：a.注解里的要和映射文件里的占位符对应上，这样才知道传给了谁，所以一般都写一样的也比较好处理<br>     b.@Param()里面的东西需要加””<br>映射接口：</p>
+<pre><code>List&lt;Brand&gt; selectByCondition(@Param("status") int status, @Param("brandName") String brandName, @Param("companyName")String companyName);
 </code></pre>
-<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><pre><code>void display(list p)//展示 
-{
-    list temp=p;
-    int i;
-    for(i=1;i&lt;=p-&gt;length;i++)//注意了，这是个循环链表，如果还按照原来的那种，那肯定是无限循环，因此就用到了长度 
-    {
-        temp=temp-&gt;next;
-        printf("%d",temp-&gt;elem);
-    }
-    printf("\n");
-}
+<p>测试：</p>
+<pre><code>List&lt;Brand&gt; brands=brandmapper.selectByCondition(1,"%华为%","%华为%");
 </code></pre>
-<h4 id="整体测试"><a href="#整体测试" class="headerlink" title="整体测试"></a>整体测试</h4><pre><code>int main()
-{
-    list p=initlink();
-    printf("创建的链表如下：");
-    display(p);
-    Insert(p,5,5);
-    printf("在第5个位置插入5：");
-    display(p);
-    Delete(p,5);
-    printf("删除第5个位置的值：");
-    display(p);
-    int a=find(p,4);
-    printf("值为4的位置是第%d个\n",a);
-    ElemType b=Find(p,8);
-    printf("第8个位置的值是%d\n",b);
-    return 0;
-}
+<h3 id="封装成一个类"><a href="#封装成一个类" class="headerlink" title="封装成一个类"></a>封装成一个类</h3><p>映射接口：</p>
+<pre><code>List&lt;Brand&gt; selectByCondition(Brand brand)
+</code></pre>
+<p>测试：</p>
+<pre><code>public void selectByCondition01(){
+        Brand brand = new Brand();
+        brand.setStatus(1);
+        brand.setBrandName("%华为%");
+        brand.setCompanyName("%华为%");//这里我直接填了，其实可以通过设置变量会更灵活
+        SqlSession session=MyBatisUtils.getSession();
+        BrandMapper brandmapper=session.getMapper(BrandMapper.class);
+        List&lt;Brand&gt; brands=brandmapper.selectByCondition(brand);
+        System.out.println(brands);
+        session.close();
+    }
+</code></pre>
+<h3 id="封装成一个Map集合"><a href="#封装成一个Map集合" class="headerlink" title="封装成一个Map集合"></a>封装成一个Map集合</h3><p>注意：这里是new HashMap,在给值时用put()方法<br>映射接口：</p>
+<pre><code>List&lt;Brand&gt; selectByCondition(Map map)
+</code></pre>
+<p>测试：</p>
+<pre><code>@Test
+    public void selectByCondition01(){
+        Map map = new HashMap();//直接new映射
+        map.put("status",1);
+        map.put("brandName","%华为%");
+        map.put("companyName","%华为%");//放值
+        SqlSession session=MyBatisUtils.getSession();
+        BrandMapper brandmapper=session.getMapper(BrandMapper.class);
+        List&lt;Brand&gt; brands=brandmapper.selectByCondition(map);
+        System.out.println(brands);
+        session.close();
+    }
+</code></pre>
+<h2 id="SQL动态查询"><a href="#SQL动态查询" class="headerlink" title="SQL动态查询"></a>SQL动态查询</h2><h3 id="多条件动态查询"><a href="#多条件动态查询" class="headerlink" title="多条件动态查询"></a>多条件动态查询</h3><p>映射文件：</p>
+<pre><code>&lt;select id="selectByCondition" resultMap="resultMap1"&gt;
+    select *
+    from tb_brand
+    &lt;where&gt;
+    &lt;if test="status != null"&gt;
+        status = #{status}
+    &lt;/if&gt;
+    &lt;if test="brandName != null and brandName != ''"&gt;
+        and brand_name like #{brandName}
+    &lt;/if&gt;
+    &lt;if test="companyName != null and companyName != ''"&gt;
+        and company_name like #{companyName}
+    &lt;/if&gt;
+    &lt;/where&gt;
+&lt;/select&gt;
+分析：
+&lt;if&gt;&lt;/if&gt;实现了选择几个就可以进行查询的效果
+存在问题：如果第一个没有被选，依旧查询不出来，因为查询语句成了where and
+解决方法：1.and status = #{status},where 1=1
+                  2.&lt;where&gt;&lt;/where&gt;
+</code></pre>
+<h3 id="单条件动态查询"><a href="#单条件动态查询" class="headerlink" title="单条件动态查询"></a>单条件动态查询</h3><p>映射文件：</p>
+<pre><code>&lt;select id="selectByConditionSignal" resultMap="resultMap1"&gt;
+    select *
+    from tb_brand
+    where
+    &lt;choose&gt;
+        &lt;when test="status != null"&gt;
+            status = #{status}
+        &lt;/when&gt;
+        &lt;when test="brandName != null and brandName != ''"&gt;
+            brand_name like #{brandName}
+        &lt;/when&gt;
+        &lt;when test="companyName != null and companyName != ''"&gt;
+            company_name like #{companyname}
+        &lt;/when&gt;
+        &lt;otherwise&gt;
+            1=1
+        &lt;/otherwise&gt;
+    &lt;/choose&gt;
+&lt;/select&gt;
+分析：&lt;choose&gt;&lt;/choose&gt;为了选择
+          &lt;when&gt;&lt;/when&gt;类似C语言的switch语句，根据条件只能选择一个
+          &lt;otherwise&gt;&lt;/otherwise&gt;最后的默认选项
+</code></pre>
+<h3 id="批量删除，遍历"><a href="#批量删除，遍历" class="headerlink" title="批量删除，遍历"></a>批量删除，遍历</h3><p>映射文件：</p>
+<pre><code>&lt;delete id="deleteByIds"&gt;
+    delete from tb_brand where id
+    in(
+    &lt;foreach collection="ids" item="id" separator=","&gt;
+        #{id}
+    &lt;/foreach&gt;
+    );
+&lt;/delete&gt;
+</code></pre>
+<pre><code>
 </code></pre>
 
                 
@@ -731,7 +674,7 @@ list initlink()//初始化并赋值（前插法）
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://liumengting.co/2021/11/20/xun-huan-lian-biao/">http://liumengting.co/2021/11/20/xun-huan-lian-biao/</a>
+                    <a href="http://liumengting.co/2022/03/28/mybatis-zhong-chang-jian-zhi-shi-dian/">http://liumengting.co/2022/03/28/mybatis-zhong-chang-jian-zhi-shi-dian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -769,16 +712,12 @@ list initlink()//初始化并赋值（前插法）
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
+                                <a href="/tags/MyBatis/">
+                                    <span class="chip bg-color">MyBatis</span>
                                 </a>
                             
-                                <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                                    <span class="chip bg-color">C语言</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/">
-                                    <span class="chip bg-color">循环链表</span>
+                                <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">基础</span>
                                 </a>
                             
                         </div>
@@ -1216,54 +1155,52 @@ list initlink()//初始化并赋值（前插法）
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/11/20/shuang-xiang-lian-biao/">
+                <a href="/2022/03/28/mybatis-zhong-chang-jian-zhi-shi-dian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="C语言实现双向链表">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="MyBatis中常见知识点">
                         
-                        <span class="card-title">C语言实现双向链表</span>
+                        <span class="card-title">MyBatis中常见知识点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            实现顺双向链表的初始化，取值，输出，插入，删除，查找
+                            Mybatis中常见知识点，数据库字段名和变量名不一样、参数占位符、特殊字符、传多个参数、动态SQL
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>11月 20 2021
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>3月 28 2022
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                    数据结构
+                            <a href="/categories/git/" class="post-category">
+                                    git
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/MyBatis/">
+                        <span class="chip bg-color">MyBatis</span>
                     </a>
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">
-                        <span class="chip bg-color">双向链表</span>
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">基础</span>
                     </a>
                     
                 </div>
@@ -1277,31 +1214,31 @@ list initlink()//初始化并赋值（前插法）
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/20/shun-xu-biao/">
+                <a href="/2022/03/28/mybatis-shi-xian-zeng-shan-gai-cha/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C语言实现顺序表">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="MyBatis实现增删改查">
                         
-                        <span class="card-title">C语言实现顺序表</span>
+                        <span class="card-title">MyBatis实现增删改查</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            实现顺序表的初始化，取值，输出，插入，删除，查找
+                            Mybatis通过修改映射文件来实现增删改查（多种查询方式）
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>11月 20 2021
+                                <i class="far fa-clock fa-fw icon-date"></i>3月 28 2022
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                    数据结构
+                            <a href="/categories/git/" class="post-category">
+                                    git
                                 </a>
                             
                             
@@ -1311,16 +1248,16 @@ list initlink()//初始化并赋值（前插法）
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/MyBatis/">
+                        <span class="chip bg-color">MyBatis</span>
                     </a>
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">基础</span>
                     </a>
                     
-                    <a href="/tags/%E9%A1%BA%E5%BA%8F%E8%A1%A8/">
-                        <span class="chip bg-color">顺序表</span>
+                    <a href="/tags/%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">
+                        <span class="chip bg-color">增删改查</span>
                     </a>
                     
                 </div>
